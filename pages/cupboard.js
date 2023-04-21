@@ -1,3 +1,49 @@
+import { Scrollbars } from "react-custom-scrollbars-2";
+
+function CupboardItem() {
+  return (
+    <div className="cupboard_flexbox_middle">
+      <div className="cupboard_single_flexbox_middle_first">
+        <img
+          src={"images/hoodie.png"}
+          alt="hoodie"
+          style={{
+            height: "27.5vh",
+            width: "19vw",
+            borderTopLeftRadius: "15%",
+            borderTopRightRadius: "15%",
+          }}
+        ></img>
+      </div>
+      <div className="cupboard_single_flexbox_middle_second">
+        <div className="cupboard_flexbox_name_date">
+          <div className="cupboard_single_name">
+            <p>Lorem Ipsum</p>
+          </div>
+          <div className="cupboard_single_date">
+            <p>01.01.2023</p>
+          </div>
+        </div>
+        <div className="cupboard_single_heart">
+          <img
+            src={"cupboard/Icon awesome-heart.svg"}
+            alt="heart"
+            style={{ height: "3.5vh", width: "3.5vh" }}
+          ></img>
+        </div>
+      </div>
+      <div className="cupboard_single_flexbox_middle_third">
+        <div className="delete_single_flexbox">
+          <p>DELETE</p>
+        </div>
+        <div className="edit_single_flexbox">
+          <p>EDIT</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Cupboard() {
   return (
     <>
@@ -33,321 +79,17 @@ export default function Cupboard() {
             <img src="cupboard/Union 1.svg" alt="filters"></img>
           </div>
         </div>
-
-        <div className="cupboard_all_flexbox_middle">
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="cupboard_flexbox_middle">
-            <div className="cupboard_single_flexbox_middle_first">
-              <img
-                src={"images/hoodie.png"}
-                alt="hoodie"
-                style={{
-                  height: "27.5vh",
-                  width: "19vw",
-                  borderTopLeftRadius: "15%",
-                  borderTopRightRadius: "15%",
-                }}
-              ></img>
-            </div>
-            <div className="cupboard_single_flexbox_middle_second">
-              <div className="cupboard_flexbox_name_date">
-                <div className="cupboard_single_name">
-                  <p>Lorem Ipsum</p>
-                </div>
-                <div className="cupboard_single_date">
-                  <p>01.01.2023</p>
-                </div>
-              </div>
-              <div className="cupboard_single_heart">
-                <img
-                  src={"cupboard/Icon awesome-heart.svg"}
-                  alt="heart"
-                  style={{ height: "3.5vh", width: "3.5vh" }}
-                ></img>
-              </div>
-            </div>
-            <div className="cupboard_single_flexbox_middle_third">
-              <div className="delete_single_flexbox">
-                <p>DELETE</p>
-              </div>
-              <div className="edit_single_flexbox">
-                <p>EDIT</p>
-              </div>
-            </div>
+        <div className="scroll_flexbox_container">
+          <div className="cupboard_all_flexbox_middle">
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
           </div>
         </div>
 
