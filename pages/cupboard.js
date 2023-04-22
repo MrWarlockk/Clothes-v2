@@ -1,4 +1,6 @@
 import { Scrollbars } from "react-custom-scrollbars-2";
+import Modal from "../components/modal_add_clothing";
+import React, { useState } from "react";
 
 function CupboardItem() {
   return (
@@ -45,6 +47,15 @@ function CupboardItem() {
 }
 
 export default function Cupboard() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <>
       <head>
@@ -59,7 +70,7 @@ export default function Cupboard() {
         <div className="background_line1"></div>
         <div className="background_line2"></div>
         <div className="background_line3"></div>
-
+        <div className="scrollbar_shadow_firefox"></div>
         <div className="top_cupboard">
           <div className="filters_cupboard_top">
             <img
@@ -75,7 +86,7 @@ export default function Cupboard() {
               <p>OUTFITS</p>
             </div>
           </div>
-          <div className="add_cupboard_top">
+          <div role="button" onClick={openModal} className="add_cupboard_top">
             <img src="cupboard/Union 1.svg" alt="filters"></img>
           </div>
         </div>
@@ -92,7 +103,6 @@ export default function Cupboard() {
             <CupboardItem />
           </div>
         </div>
-
         <div className="sidebar_img">
           <img
             src={"sidebar/rectangle 161.svg"}
@@ -116,6 +126,16 @@ export default function Cupboard() {
           <div className={"sidebar_logout" + " " + "sidebar_bottom"}>
             <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
           </div>
+        </div>
+        {/* ADD CLOTHES MODAL */}
+        <div>
+          <Modal isOpen={modalIsOpen} onClose={closeModal}>
+            <div className="add_clothes_modal">
+              <h2>My Modal</h2>
+              <p>This is the content of my modal.</p>
+              <button onClick={closeModal}>Close Modal</button>
+            </div>
+          </Modal>
         </div>
       </body>
     </>

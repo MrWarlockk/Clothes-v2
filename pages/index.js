@@ -1,5 +1,5 @@
 function Home() {
-  return <h1>Not account page</h1>;
+  return <h1>Login page</h1>;
 }
 
 export default Home;
