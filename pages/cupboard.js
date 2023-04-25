@@ -45,7 +45,9 @@ function CupboardItem() {
     </div>
   );
 }
-
+function FlexboxColors(props) {
+  return <div className={"flexbox_add_single_color" + " " + props.color}></div>;
+}
 export default function Cupboard() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -56,6 +58,15 @@ export default function Cupboard() {
   const closeModal = () => {
     setModalIsOpen(false);
   };
+  const [isBlurred, setIsBlurred] = useState(false);
+
+  function handleBlurClick() {
+    setIsBlurred(true);
+  }
+
+  function handleUnblurClick() {
+    setIsBlurred(false);
+  }
   return (
     <>
       <head>
@@ -67,40 +78,49 @@ export default function Cupboard() {
         <title> Cupboard page </title>
       </head>
       <body>
-        <div className="background_line1"></div>
-        <div className="background_line2"></div>
-        <div className="background_line3"></div>
-        <div className="scrollbar_shadow_firefox"></div>
-        <div className="top_cupboard">
-          <div className="filters_cupboard_top">
-            <img
-              src="cupboard/Icon material-filter-list.svg"
-              alt="filters"
-            ></img>
-          </div>
-          <div className="single_pieces_cupboard_top">
-            <p>SINGLE PIECES</p>
-          </div>
-          <div className="outfits_cupboard_top">
-            <div className="outfits_cupboard_top_text">
-              <p>OUTFITS</p>
+        <div className={isBlurred ? "blurred" : ""}>
+          <div className="background_line1"></div>
+          <div className="background_line2"></div>
+          <div className="background_line3"></div>
+          <div className="scrollbar_shadow_firefox"></div>
+          <div className="top_cupboard">
+            <div className="filters_cupboard_top">
+              <img
+                src="cupboard/Icon material-filter-list.svg"
+                alt="filters"
+              ></img>
+            </div>
+            <div className="single_pieces_cupboard_top">
+              <p>SINGLE PIECES</p>
+            </div>
+            <div className="outfits_cupboard_top">
+              <div className="outfits_cupboard_top_text">
+                <p>OUTFITS</p>
+              </div>
+            </div>
+            <div
+              role="button"
+              onClick={() => {
+                openModal();
+                handleBlurClick();
+              }}
+              className="add_cupboard_top"
+            >
+              <img src="cupboard/Union 1.svg" alt="filters"></img>
             </div>
           </div>
-          <div role="button" onClick={openModal} className="add_cupboard_top">
-            <img src="cupboard/Union 1.svg" alt="filters"></img>
-          </div>
-        </div>
-        <div className="scroll_flexbox_container">
-          <div className="cupboard_all_flexbox_middle">
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
-            <CupboardItem />
+          <div className="scroll_flexbox_container">
+            <div className="cupboard_all_flexbox_middle">
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+              <CupboardItem />
+            </div>
           </div>
         </div>
         <div className="sidebar_img">
@@ -131,9 +151,64 @@ export default function Cupboard() {
         <div>
           <Modal isOpen={modalIsOpen} onClose={closeModal}>
             <div className="add_clothes_modal">
-              <h2>My Modal</h2>
-              <p>This is the content of my modal.</p>
-              <button onClick={closeModal}>Close Modal</button>
+              <div className="flexbox_add_clothes_modal_1">
+                <div className="flexbox_add_clothes_image">
+                  <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                </div>
+                <div className="flexbox_add_clothes_not_image">
+                  <div className="flexbox_add_clothes_modal_2">
+                    <div className="flexbox_add_clothes_above_add_new"></div>
+                    <div className="flexbox_add_clothes_add_new">
+                      <p>ADD NEW</p>
+                    </div>
+                    <div className="flexbox_add_clothes_category">
+                      <p>
+                        CATEGORY
+                        <span className="flexbox_add_clothes_expand">
+                          &#9661;
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flexbox_add_clothes_color_area">
+                      <div className="flexbox_add_clothes_color_text">
+                        <p>COLOR</p>
+                      </div>
+                      <div className="flexbox_add_clothes_modal_colors">
+                        <FlexboxColors color="flexbox_add_black" />
+                        <FlexboxColors color="flexbox_add_white" />
+                        <FlexboxColors color="flexbox_add_red" />
+                        <FlexboxColors color="flexbox_add_orange" />
+                        <FlexboxColors color="flexbox_add_yellow" />
+                        <FlexboxColors color="flexbox_add_green" />
+                        <FlexboxColors color="flexbox_add_aqua" />
+                        <FlexboxColors color="flexbox_add_blue" />
+                        <FlexboxColors color="flexbox_add_purple" />
+                        <FlexboxColors color="flexbox_add_pink" />
+                        <FlexboxColors color="flexbox_add_brown" />
+                        <FlexboxColors color="flexbox_add_beige" />
+                      </div>
+                    </div>
+                    <div className="flexbox_add_clothes_modal_3">
+                      <div className="flexbox_add_clothes_discard">
+                        <p>DISCARD</p>
+                      </div>
+                      <div className="flexbox_add_clothes_save">
+                        <p>SAVE</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                onClick={() => {
+                  closeModal();
+                  handleUnblurClick();
+                }}
+                className="flexbox_add_clothes_close"
+              >
+                <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
+                {/*<button onClick={closeModal}>Close Modal</button>*/}
+              </div>
             </div>
           </Modal>
         </div>
