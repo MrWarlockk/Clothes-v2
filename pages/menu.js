@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-function Home() {
+function Menu() {
   return (
     <>
       <body>
-        <h1>Login page</h1>
+        <h1>Menu page</h1>
         <div className="sidebar_img">
           <img
             src={"sidebar/rectangle 161.svg"}
@@ -14,11 +14,9 @@ function Home() {
         </div>
 
         <div className="sidebar">
-          <Link href={"/menu"}>
-            <div className={"sidebar_menu"}>
-              <img src={"sidebar/menu.svg"} alt="menu"></img>
-            </div>
-          </Link>
+          <div className={"sidebar_menu" + " " + "sidebar_menu_on"}>
+            <img src={"sidebar/menu.svg"} alt="menu"></img>
+          </div>
           <Link href={"/clothes"}>
             <div className={"sidebar_clothes"}>
               <img src={"sidebar/wieszak.svg"} alt="menu"></img>
@@ -34,13 +32,15 @@ function Home() {
               <img src={"sidebar/moje konto.svg"} alt="menu"></img>
             </div>
           </Link>
-          <div className={"sidebar_logout"}>
-            <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-          </div>
+          <Link href={"/"}>
+            <div className={"sidebar_logout"}>
+              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
+            </div>
+          </Link>
         </div>
       </body>
     </>
   );
 }
 
-export default Home;
+export default Menu;

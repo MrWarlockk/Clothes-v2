@@ -1,6 +1,6 @@
-import { Scrollbars } from "react-custom-scrollbars-2";
 import Modal from "../components/modal_add_clothing";
-import React, { useState } from "react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 function CupboardItem() {
   return (
@@ -45,18 +45,66 @@ function CupboardItem() {
     </div>
   );
 }
+function CupboardItem2() {
+  return (
+    <div className="cupboard_flexbox_middle">
+      <div className="cupboard_single_flexbox_middle_first">
+        <div className="cupboard_outfit_images">
+          <div className="cupboard_outfit_images_single">
+            <img src={"images/hoodie.png"} alt="hoodie"></img>
+          </div>
+          <div className="cupboard_outfit_images_single">
+            <img src={"images/hoodie.png"} alt="hoodie"></img>
+          </div>{" "}
+          <div className="cupboard_outfit_images_single">
+            <img src={"images/hoodie.png"} alt="hoodie"></img>
+          </div>{" "}
+          <div className="cupboard_outfit_images_single">
+            <img src={"images/hoodie.png"} alt="hoodie"></img>
+          </div>
+        </div>
+      </div>
+      <div className="cupboard_single_flexbox_middle_second">
+        <div className="cupboard_flexbox_name_date">
+          <div className="cupboard_single_name">
+            <p>Lorem Ipsum</p>
+          </div>
+          <div className="cupboard_single_date">
+            <p>01.01.2023</p>
+          </div>
+        </div>
+        <div className="cupboard_single_heart">
+          <img
+            src={"cupboard/Icon awesome-heart.svg"}
+            alt="heart"
+            style={{ height: "3.5vh", width: "3.5vh" }}
+          ></img>
+        </div>
+      </div>
+      <div className="cupboard_single_flexbox_middle_third">
+        <div className="delete_single_flexbox">
+          <p>DELETE</p>
+        </div>
+        <div className="edit_single_flexbox">
+          <p>EDIT</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 function FlexboxColors(props) {
   return <div className={"flexbox_add_single_color" + " " + props.color}></div>;
 }
 export default function Cupboard() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modal_cupboard_variable, set_modal_cupboard_variable] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-    setModalIsOpen(true);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setModalIsOpen(false);
+    setIsModalOpen(false);
   };
   const [isBlurred, setIsBlurred] = useState(false);
 
@@ -67,6 +115,162 @@ export default function Cupboard() {
   function handleUnblurClick() {
     setIsBlurred(false);
   }
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position_top, setPosition_top] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    setPosition({
+      x: window.innerWidth * 0,
+      y: window.innerHeight * 0.12,
+    });
+
+    setPosition_top({
+      x: window.innerWidth * 0.317,
+      y: window.innerHeight * 0.044,
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (modal_cupboard_variable === 0) {
+        setPosition({
+          x: window.innerWidth * 0,
+          y: window.innerHeight * 0.12,
+        });
+        setPosition_top({
+          x: window.innerWidth * 0.317,
+          y: window.innerHeight * 0.044,
+        });
+      } else if (modal_cupboard_variable === 1) {
+        setPosition({
+          x: window.innerWidth * 0 - window.innerWidth,
+          y: window.innerHeight * 0.12,
+        });
+        setPosition_top({
+          x: window.innerWidth * 0.517,
+          y: window.innerHeight * 0.044,
+        });
+      }
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [modal_cupboard_variable]);
+  const move_outfits = () => {
+    const element = document.querySelector(".cupboard_flexbox_middle_1");
+    const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+    element.classList.add("transition_all_1s");
+    element2.classList.add("transition_all_1s");
+    const newPosition = {
+      x: position.x - window.innerWidth,
+      y: position.y + 0,
+    };
+    setPosition(newPosition);
+    setTimeout(() => {
+      element.classList.remove("transition_all_1s");
+      element2.classList.remove("transition_all_1s");
+    }, 1000);
+  };
+  const move_pieces = () => {
+    const element = document.querySelector(".cupboard_flexbox_middle_1");
+    const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+    element.classList.add("transition_all_1s");
+    element2.classList.add("transition_all_1s");
+    const newPosition = {
+      x: position.x + window.innerWidth,
+      y: position.y + 0,
+    };
+    setPosition(newPosition);
+    setTimeout(() => {
+      element.classList.remove("transition_all_1s");
+      element2.classList.remove("transition_all_1s");
+    }, 1000);
+  };
+  const move_pieces_button = () => {
+    const container = document.querySelector(
+      ".pieces_outfits_moving_container"
+    );
+    const text = document.querySelector(".outfits_cupboard_top_text");
+    const text2 = document.querySelector(".pieces_cupboard_top_text");
+    text.classList.add("transition_all_05s");
+    text2.classList.add("transition_all_05s");
+    container.classList.add("transition_all_02s");
+    const newPosition_top = {
+      x: position_top.x - 0.195 * window.innerWidth,
+      y: position_top.y + 0,
+    };
+    setPosition_top(newPosition_top);
+    setTimeout(() => {
+      container.classList.remove("transition_all_02s");
+    }, 200);
+    setTimeout(() => {
+      text.classList.remove("transition_all_05s");
+    }, 500);
+    setTimeout(() => {
+      text2.classList.remove("transition_all_05s");
+    }, 500);
+  };
+  const move_outfits_button = () => {
+    const container = document.querySelector(
+      ".pieces_outfits_moving_container"
+    );
+    const text = document.querySelector(".outfits_cupboard_top_text");
+    const text2 = document.querySelector(".pieces_cupboard_top_text");
+    text.classList.add("transition_all_05s");
+    text2.classList.add("transition_all_05s");
+    container.classList.add("transition_all_02s");
+    const newPosition_top = {
+      x: position_top.x + 0.195 * window.innerWidth,
+      y: position_top.y + 0,
+    };
+    setPosition_top(newPosition_top);
+    setTimeout(() => {
+      container.classList.remove("transition_all_02s");
+    }, 200);
+    setTimeout(() => {
+      text.classList.remove("transition_all_05s");
+    }, 500);
+    setTimeout(() => {
+      text2.classList.remove("transition_all_05s");
+    }, 500);
+  };
+  const [vw, setVw] = useState(0);
+
+  useEffect(() => {
+    setVw(window.innerWidth);
+    const handleResize = () => setVw(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const [pieces_button_clicked, set_pieces_clicked] = useState(true);
+  const [outfits_button_clicked, set_outfits_clicked] = useState(false);
+
+  function pieces_click() {
+    set_pieces_clicked(true);
+    set_outfits_clicked(false);
+  }
+
+  function outfits_click() {
+    set_pieces_clicked(false);
+    set_outfits_clicked(true);
+  }
+  const [piece_color, set_piece_color] = useState("white");
+  const [outfit_color, set_outfit_color] = useState("#f98770");
+  const change_colors1 = () => {
+    set_piece_color("white");
+    set_outfit_color("#f98770");
+  };
+  const change_colors2 = () => {
+    set_piece_color("#f98770");
+    set_outfit_color("white");
+  };
+  /*----------------------------------------------------------*/
+  /*--------------------------body----------------------------*/
+  /*----------------------------------------------------------*/
   return (
     <>
       <head>
@@ -79,10 +283,31 @@ export default function Cupboard() {
       </head>
       <body>
         <div className={isBlurred ? "blurred" : ""}>
+          <div
+            className="pieces_outfits_moving_container"
+            style={{
+              top: position_top.y,
+              left: position_top.x,
+            }}
+          ></div>
           <div className="background_line1"></div>
           <div className="background_line2"></div>
           <div className="background_line3"></div>
           <div className="scrollbar_shadow_firefox"></div>
+          <div className="cupboard_top_text">
+            <div
+              className="pieces_cupboard_top_text"
+              style={{ color: piece_color }}
+            >
+              <p>SINGLE PIECES</p>
+            </div>
+            <div
+              className="outfits_cupboard_top_text"
+              style={{ color: outfit_color }}
+            >
+              <p>OUTFITS</p>
+            </div>
+          </div>
           <div className="top_cupboard">
             <div className="filters_cupboard_top">
               <img
@@ -90,14 +315,32 @@ export default function Cupboard() {
                 alt="filters"
               ></img>
             </div>
-            <div className="single_pieces_cupboard_top">
-              <p>SINGLE PIECES</p>
-            </div>
-            <div className="outfits_cupboard_top">
-              <div className="outfits_cupboard_top_text">
-                <p>OUTFITS</p>
-              </div>
-            </div>
+            <button
+              style={{
+                top: position.y,
+                left: position.x,
+              }}
+              className="single_pieces_cupboard_top"
+              onClick={() => {
+                pieces_click();
+                move_pieces();
+                move_pieces_button();
+                change_colors1();
+                set_modal_cupboard_variable(0);
+              }}
+              disabled={pieces_button_clicked}
+            ></button>
+            <button
+              className="outfits_cupboard_top"
+              onClick={() => {
+                outfits_click();
+                move_outfits();
+                move_outfits_button();
+                change_colors2();
+                set_modal_cupboard_variable(1);
+              }}
+              disabled={outfits_button_clicked}
+            ></button>
             <div
               role="button"
               onClick={() => {
@@ -109,20 +352,35 @@ export default function Cupboard() {
               <img src="cupboard/Union 1.svg" alt="filters"></img>
             </div>
           </div>
-          <div className="scroll_flexbox_container">
-            <div className="cupboard_all_flexbox_middle">
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-              <CupboardItem />
-            </div>
+          <div
+            className="cupboard_flexbox_middle_1"
+            style={{
+              top: position.y,
+              left: position.x,
+            }}
+          >
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+            <CupboardItem />
+          </div>
+          <div
+            className="cupboard_flexbox_middle_2"
+            style={{
+              top: position.y,
+              left: position.x + vw,
+            }}
+          >
+            <CupboardItem2 />
+            <CupboardItem2 />
           </div>
         </div>
+
         <div className="sidebar_img">
           <img
             src={"sidebar/rectangle 161.svg"}
@@ -131,74 +389,100 @@ export default function Cupboard() {
           />
         </div>
         <div className="sidebar">
-          <div className={"sidebar_menu" + " " + "sidebar_top"}>
-            <img src={"sidebar/menu.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_clothes" + " " + "sidebar_top"}>
-            <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_cupboard" + " " + "sidebar_top"}>
+          <Link href={"/menu"}>
+            <div className={"sidebar_menu"}>
+              <img src={"sidebar/menu.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link href={"/clothes"}>
+            <div className={"sidebar_clothes"}>
+              <img src={"sidebar/wieszak.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <div className={"sidebar_cupboard" + " " + "sidebar_cupboard_on"}>
             <img src={"sidebar/szafa.svg"} alt="menu"></img>
           </div>
-          <div className={"sidebar_account" + " " + "sidebar_top"}>
-            <img src={"sidebar/moje konto.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_logout" + " " + "sidebar_bottom"}>
-            <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-          </div>
+          <Link href={"/account"}>
+            <div className={"sidebar_account"}>
+              <img src={"sidebar/moje konto.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link href={"/"}>
+            <div className={"sidebar_logout"}>
+              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
+            </div>
+          </Link>
         </div>
         {/* ADD CLOTHES MODAL */}
         <div>
-          <Modal isOpen={modalIsOpen} onClose={closeModal}>
-            <div className="add_clothes_modal">
-              <div className="flexbox_add_clothes_modal_1">
-                <div className="flexbox_add_clothes_image">
-                  <img src={"cupboard/photo_img.svg"} alt="photo"></img>
-                </div>
-                <div className="flexbox_add_clothes_not_image">
-                  <div className="flexbox_add_clothes_modal_2">
-                    <div className="flexbox_add_clothes_above_add_new"></div>
-                    <div className="flexbox_add_clothes_add_new">
-                      <p>ADD NEW</p>
-                    </div>
-                    <div className="flexbox_add_clothes_category">
-                      <p>
-                        CATEGORY
-                        <span className="flexbox_add_clothes_expand">
-                          &#9661;
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flexbox_add_clothes_color_area">
-                      <div className="flexbox_add_clothes_color_text">
-                        <p>COLOR</p>
+          {modal_cupboard_variable === 0 && (
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+              <div className="add_clothes_modal">
+                <div className="flexbox_add_clothes_modal_1">
+                  <div className="flexbox_add_clothes_image">
+                    <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                  </div>
+                  <div className="flexbox_add_clothes_not_image">
+                    <div className="flexbox_add_clothes_modal_2">
+                      <div className="flexbox_add_clothes_above_add_new"></div>
+                      <div className="flexbox_add_clothes_add_new">
+                        <p>ADD NEW</p>
                       </div>
-                      <div className="flexbox_add_clothes_modal_colors">
-                        <FlexboxColors color="flexbox_add_black" />
-                        <FlexboxColors color="flexbox_add_white" />
-                        <FlexboxColors color="flexbox_add_red" />
-                        <FlexboxColors color="flexbox_add_orange" />
-                        <FlexboxColors color="flexbox_add_yellow" />
-                        <FlexboxColors color="flexbox_add_green" />
-                        <FlexboxColors color="flexbox_add_aqua" />
-                        <FlexboxColors color="flexbox_add_blue" />
-                        <FlexboxColors color="flexbox_add_purple" />
-                        <FlexboxColors color="flexbox_add_pink" />
-                        <FlexboxColors color="flexbox_add_brown" />
-                        <FlexboxColors color="flexbox_add_beige" />
+                      <div className="flexbox_add_clothes_category">
+                        <p>
+                          CATEGORY
+                          <span className="flexbox_add_clothes_expand">
+                            &#9661;
+                          </span>
+                        </p>
                       </div>
-                    </div>
-                    <div className="flexbox_add_clothes_modal_3">
-                      <div className="flexbox_add_clothes_discard">
-                        <p>DISCARD</p>
+                      <div className="flexbox_add_clothes_color_area">
+                        <div className="flexbox_add_clothes_color_text">
+                          <p>COLOR</p>
+                        </div>
+                        <div className="flexbox_add_clothes_modal_colors">
+                          <FlexboxColors color="flexbox_add_black" />
+                          <FlexboxColors color="flexbox_add_white" />
+                          <FlexboxColors color="flexbox_add_red" />
+                          <FlexboxColors color="flexbox_add_orange" />
+                          <FlexboxColors color="flexbox_add_yellow" />
+                          <FlexboxColors color="flexbox_add_green" />
+                          <FlexboxColors color="flexbox_add_aqua" />
+                          <FlexboxColors color="flexbox_add_blue" />
+                          <FlexboxColors color="flexbox_add_purple" />
+                          <FlexboxColors color="flexbox_add_pink" />
+                          <FlexboxColors color="flexbox_add_brown" />
+                          <FlexboxColors color="flexbox_add_beige" />
+                        </div>
                       </div>
-                      <div className="flexbox_add_clothes_save">
-                        <p>SAVE</p>
+                      <div className="flexbox_add_clothes_modal_3">
+                        <div className="flexbox_add_clothes_discard">
+                          <p>DISCARD</p>
+                        </div>
+                        <div className="flexbox_add_clothes_save">
+                          <p>SAVE</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div
+                  onClick={() => {
+                    closeModal();
+                    handleUnblurClick();
+                  }}
+                  className="flexbox_add_clothes_close"
+                >
+                  <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
+                </div>
               </div>
+            </Modal>
+          )}
+        </div>
+        {modal_cupboard_variable === 1 && (
+          <Modal isOpen={isModalOpen} onClose={closeModal}>
+            <div className="add_clothes_modal">
+              <div className="flexbox_add_clothes_modal_1"></div>
               <div
                 onClick={() => {
                   closeModal();
@@ -207,11 +491,10 @@ export default function Cupboard() {
                 className="flexbox_add_clothes_close"
               >
                 <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
-                {/*<button onClick={closeModal}>Close Modal</button>*/}
               </div>
             </div>
           </Modal>
-        </div>
+        )}
       </body>
     </>
   );

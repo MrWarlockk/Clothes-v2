@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function MyAccount() {
   return (
     <>
@@ -149,21 +151,29 @@ export default function MyAccount() {
         </div>
 
         <div className="sidebar">
-          <div className={"sidebar_menu" + " " + "sidebar_top"}>
-            <img src={"sidebar/menu.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_clothes" + " " + "sidebar_top"}>
-            <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_cupboard" + " " + "sidebar_top"}>
-            <img src={"sidebar/szafa.svg"} alt="menu"></img>
-          </div>
-          <div className={"sidebar_account" + " " + "sidebar_top"}>
+          <Link href={"/menu"}>
+            <div className={"sidebar_menu"}>
+              <img src={"sidebar/menu.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link href={"/clothes"}>
+            <div className={"sidebar_clothes"}>
+              <img src={"sidebar/wieszak.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link href={"/cupboard"}>
+            <div className={"sidebar_cupboard"}>
+              <img src={"sidebar/szafa.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <div className={"sidebar_account" + " " + "sidebar_account_on"}>
             <img src={"sidebar/moje konto.svg"} alt="menu"></img>
           </div>
-          <div className={"sidebar_logout" + " " + "sidebar_bottom"}>
-            <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-          </div>
+          <Link href={"/"}>
+            <div className={"sidebar_logout"}>
+              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
+            </div>
+          </Link>
         </div>
       </body>
     </>
