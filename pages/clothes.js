@@ -5,13 +5,6 @@ function Clothes() {
     <>
       <body>
         <h1>Clothes page</h1>
-        <div className="sidebar_img">
-          <img
-            src={"sidebar/rectangle 161.svg"}
-            alt="menu"
-            style={{ height: "90vh" }}
-          />
-        </div>
 
         <div className="sidebar">
           <Link href={"/menu"}>

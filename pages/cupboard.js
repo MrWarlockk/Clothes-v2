@@ -117,6 +117,7 @@ export default function Cupboard() {
   }
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [position_top, setPosition_top] = useState({ x: 0, y: 0 });
+  const [is_moving, set_is_moving] = useState(0);
 
   useEffect(() => {
     setPosition({
@@ -129,7 +130,6 @@ export default function Cupboard() {
       y: window.innerHeight * 0.044,
     });
   }, []);
-
   useEffect(() => {
     const handleResize = () => {
       if (modal_cupboard_variable === 0) {
@@ -160,7 +160,17 @@ export default function Cupboard() {
       window.removeEventListener("resize", handleResize);
     };
   }, [modal_cupboard_variable]);
+  useEffect(() => {
+    if (is_moving === 0) {
+      const element = document.querySelector(".cupboard_flexbox_middle_1");
+      const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+      element.classList.remove("transition_all_1s");
+      element2.classList.remove("transition_all_1s");
+    }
+  }, [is_moving]);
+
   const move_outfits = () => {
+    set_is_moving((prevIsMoving) => prevIsMoving + 1);
     const element = document.querySelector(".cupboard_flexbox_middle_1");
     const element2 = document.querySelector(".cupboard_flexbox_middle_2");
     element.classList.add("transition_all_1s");
@@ -171,11 +181,19 @@ export default function Cupboard() {
     };
     setPosition(newPosition);
     setTimeout(() => {
-      element.classList.remove("transition_all_1s");
-      element2.classList.remove("transition_all_1s");
+      set_is_moving((prevIsMoving) => prevIsMoving - 1);
     }, 1000);
   };
+  useEffect(() => {
+    if (is_moving === 0) {
+      const element = document.querySelector(".cupboard_flexbox_middle_1");
+      const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+      element.classList.remove("transition_all_1s");
+      element2.classList.remove("transition_all_1s");
+    }
+  }, [is_moving]);
   const move_pieces = () => {
+    set_is_moving((prevIsMoving) => prevIsMoving + 1);
     const element = document.querySelector(".cupboard_flexbox_middle_1");
     const element2 = document.querySelector(".cupboard_flexbox_middle_2");
     element.classList.add("transition_all_1s");
@@ -186,8 +204,7 @@ export default function Cupboard() {
     };
     setPosition(newPosition);
     setTimeout(() => {
-      element.classList.remove("transition_all_1s");
-      element2.classList.remove("transition_all_1s");
+      set_is_moving((prevIsMoving) => prevIsMoving - 1);
     }, 1000);
   };
   const move_pieces_button = () => {
@@ -204,16 +221,19 @@ export default function Cupboard() {
       y: position_top.y + 0,
     };
     setPosition_top(newPosition_top);
-    setTimeout(() => {
-      container.classList.remove("transition_all_02s");
-    }, 200);
-    setTimeout(() => {
-      text.classList.remove("transition_all_05s");
-    }, 500);
-    setTimeout(() => {
-      text2.classList.remove("transition_all_05s");
-    }, 500);
   };
+  useEffect(() => {
+    if (is_moving === 0) {
+      const container = document.querySelector(
+        ".pieces_outfits_moving_container"
+      );
+      const text = document.querySelector(".outfits_cupboard_top_text");
+      const text2 = document.querySelector(".pieces_cupboard_top_text");
+      container.classList.remove("transition_all_02s");
+      text.classList.remove("transition_all_05s");
+      text2.classList.remove("transition_all_05s");
+    }
+  }, [is_moving]);
   const move_outfits_button = () => {
     const container = document.querySelector(
       ".pieces_outfits_moving_container"
@@ -228,16 +248,19 @@ export default function Cupboard() {
       y: position_top.y + 0,
     };
     setPosition_top(newPosition_top);
-    setTimeout(() => {
-      container.classList.remove("transition_all_02s");
-    }, 200);
-    setTimeout(() => {
-      text.classList.remove("transition_all_05s");
-    }, 500);
-    setTimeout(() => {
-      text2.classList.remove("transition_all_05s");
-    }, 500);
   };
+  useEffect(() => {
+    if (is_moving === 0) {
+      const container = document.querySelector(
+        ".pieces_outfits_moving_container"
+      );
+      const text = document.querySelector(".outfits_cupboard_top_text");
+      const text2 = document.querySelector(".pieces_cupboard_top_text");
+      container.classList.remove("transition_all_02s");
+      text.classList.remove("transition_all_05s");
+      text2.classList.remove("transition_all_05s");
+    }
+  }, [is_moving]);
   const [vw, setVw] = useState(0);
 
   useEffect(() => {
@@ -381,13 +404,6 @@ export default function Cupboard() {
           </div>
         </div>
 
-        <div className="sidebar_img">
-          <img
-            src={"sidebar/rectangle 161.svg"}
-            alt="menu"
-            style={{ height: "90vh" }}
-          />
-        </div>
         <div className="sidebar">
           <Link href={"/menu"}>
             <div className={"sidebar_menu"}>
@@ -482,7 +498,38 @@ export default function Cupboard() {
         {modal_cupboard_variable === 1 && (
           <Modal isOpen={isModalOpen} onClose={closeModal}>
             <div className="add_clothes_modal">
-              <div className="flexbox_add_clothes_modal_1"></div>
+              <div className="flexbox_add_clothes_modal_1">
+                <div className="flexbox_add_outfit_images">
+                  <div className="flexbox_add_outfit_images_single">
+                    <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                  </div>
+                  <div className="flexbox_add_outfit_images_single">
+                    <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                  </div>{" "}
+                  <div className="flexbox_add_outfit_images_single">
+                    <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                  </div>{" "}
+                  <div className="flexbox_add_outfit_images_single">
+                    <img src={"cupboard/photo_img.svg"} alt="photo"></img>
+                  </div>
+                </div>
+                <div className="flexbox_add_outfit_modal_2">
+                  <div className="flexbox_add_outfit_text">SAVE OUTFIT</div>
+                  <div className="flexbox_add_outfit_title">
+                    title
+                    <div className="flexbox_add_outfit_title_line"></div>
+                  </div>
+                  <div className="flexbox_add_outfit_line"></div>
+                  <div className="flexbox_add_outfit_modal_3">
+                    <div className="flexbox_add_outfit_discard">
+                      <p>DISCARD</p>
+                    </div>
+                    <div className="flexbox_add_outfit_save">
+                      <p>SAVE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div
                 onClick={() => {
                   closeModal();

@@ -5,13 +5,6 @@ function Menu() {
     <>
       <body>
         <h1>Menu page</h1>
-        <div className="sidebar_img">
-          <img
-            src={"sidebar/rectangle 161.svg"}
-            alt="menu"
-            style={{ height: "90vh" }}
-          />
-        </div>
 
         <div className="sidebar">
           <div className={"sidebar_menu" + " " + "sidebar_menu_on"}>
