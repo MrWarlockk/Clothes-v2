@@ -1,11 +1,13 @@
 import Modal from "../components/modal_add_clothing";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import styles from "../styles/cupboard.module.css";
+import classNames from "classnames";
 
 function CupboardItem() {
   return (
-    <div className="cupboard_flexbox_middle">
-      <div className="cupboard_single_flexbox_middle_first">
+    <div className={styles.cupboard_flexbox_middle}>
+      <div className={styles.cupboard_single_flexbox_middle_first}>
         <img
           src={"images/hoodie.png"}
           alt="hoodie"
@@ -17,16 +19,16 @@ function CupboardItem() {
           }}
         ></img>
       </div>
-      <div className="cupboard_single_flexbox_middle_second">
-        <div className="cupboard_flexbox_name_date">
-          <div className="cupboard_single_name">
+      <div className={styles.cupboard_single_flexbox_middle_second}>
+        <div className={styles.cupboard_flexbox_name_date}>
+          <div className={styles.cupboard_single_name}>
             <p>Lorem Ipsum</p>
           </div>
-          <div className="cupboard_single_date">
+          <div className={styles.cupboard_single_date}>
             <p>01.01.2023</p>
           </div>
         </div>
-        <div className="cupboard_single_heart">
+        <div className={styles.cupboard_single_heart}>
           <img
             src={"cupboard/Icon awesome-heart.svg"}
             alt="heart"
@@ -34,11 +36,11 @@ function CupboardItem() {
           ></img>
         </div>
       </div>
-      <div className="cupboard_single_flexbox_middle_third">
-        <div className="delete_single_flexbox">
+      <div className={styles.cupboard_single_flexbox_middle_third}>
+        <div className={styles.delete_single_flexbox}>
           <p>DELETE</p>
         </div>
-        <div className="edit_single_flexbox">
+        <div className={styles.edit_single_flexbox}>
           <p>EDIT</p>
         </div>
       </div>
@@ -47,33 +49,33 @@ function CupboardItem() {
 }
 function CupboardItem2() {
   return (
-    <div className="cupboard_flexbox_middle">
-      <div className="cupboard_single_flexbox_middle_first">
-        <div className="cupboard_outfit_images">
-          <div className="cupboard_outfit_images_single">
+    <div className={styles.cupboard_flexbox_middle}>
+      <div className={styles.cupboard_single_flexbox_middle_first}>
+        <div className={styles.cupboard_outfit_images}>
+          <div className={styles.cupboard_outfit_images_single}>
             <img src={"images/hoodie.png"} alt="hoodie"></img>
           </div>
-          <div className="cupboard_outfit_images_single">
+          <div className={styles.cupboard_outfit_images_single}>
             <img src={"images/hoodie.png"} alt="hoodie"></img>
           </div>{" "}
-          <div className="cupboard_outfit_images_single">
+          <div className={styles.cupboard_outfit_images_single}>
             <img src={"images/hoodie.png"} alt="hoodie"></img>
           </div>{" "}
-          <div className="cupboard_outfit_images_single">
+          <div className={styles.cupboard_outfit_images_single}>
             <img src={"images/hoodie.png"} alt="hoodie"></img>
           </div>
         </div>
       </div>
-      <div className="cupboard_single_flexbox_middle_second">
-        <div className="cupboard_flexbox_name_date">
-          <div className="cupboard_single_name">
+      <div className={styles.cupboard_single_flexbox_middle_second}>
+        <div className={styles.cupboard_flexbox_name_date}>
+          <div className={styles.cupboard_single_name}>
             <p>Lorem Ipsum</p>
           </div>
-          <div className="cupboard_single_date">
+          <div className={styles.cupboard_single_date}>
             <p>01.01.2023</p>
           </div>
         </div>
-        <div className="cupboard_single_heart">
+        <div className={styles.cupboard_single_heart}>
           <img
             src={"cupboard/Icon awesome-heart.svg"}
             alt="heart"
@@ -81,11 +83,11 @@ function CupboardItem2() {
           ></img>
         </div>
       </div>
-      <div className="cupboard_single_flexbox_middle_third">
-        <div className="delete_single_flexbox">
+      <div className={styles.cupboard_single_flexbox_middle_third}>
+        <div className={styles.delete_single_flexbox}>
           <p>DELETE</p>
         </div>
-        <div className="edit_single_flexbox">
+        <div className={styles.edit_single_flexbox}>
           <p>EDIT</p>
         </div>
       </div>
@@ -93,7 +95,11 @@ function CupboardItem2() {
   );
 }
 function FlexboxColors(props) {
-  return <div className={"flexbox_add_single_color" + " " + props.color}></div>;
+  return (
+    <div
+      className={classNames(styles.flexbox_add_single_color, props.color)}
+    ></div>
+  );
 }
 export default function Cupboard() {
   const [modal_cupboard_variable, set_modal_cupboard_variable] = useState(0);
@@ -305,7 +311,7 @@ export default function Cupboard() {
         <title> Cupboard page </title>
       </head>
       <body>
-        <div className={isBlurred ? "blurred" : ""}>
+        <div className={isBlurred ? styles.blurred : ""}>
           <div
             className="pieces_outfits_moving_container"
             style={{
@@ -317,7 +323,7 @@ export default function Cupboard() {
           <div className="background_line2"></div>
           <div className="background_line3"></div>
           <div className="scrollbar_shadow_firefox"></div>
-          <div className="cupboard_top_text">
+          <div className={styles.cupboard_top_text}>
             <div
               className="pieces_cupboard_top_text"
               style={{ color: piece_color }}
@@ -331,8 +337,8 @@ export default function Cupboard() {
               <p>OUTFITS</p>
             </div>
           </div>
-          <div className="top_cupboard">
-            <div className="filters_cupboard_top">
+          <div className={styles.top_cupboard}>
+            <div className={styles.filters_cupboard_top}>
               <img
                 src="cupboard/Icon material-filter-list.svg"
                 alt="filters"
@@ -343,7 +349,7 @@ export default function Cupboard() {
                 top: position.y,
                 left: position.x,
               }}
-              className="single_pieces_cupboard_top"
+              className={styles.single_pieces_cupboard_top}
               onClick={() => {
                 pieces_click();
                 move_pieces();
@@ -354,7 +360,7 @@ export default function Cupboard() {
               disabled={pieces_button_clicked}
             ></button>
             <button
-              className="outfits_cupboard_top"
+              className={styles.outfits_cupboard_top}
               onClick={() => {
                 outfits_click();
                 move_outfits();
@@ -370,13 +376,13 @@ export default function Cupboard() {
                 openModal();
                 handleBlurClick();
               }}
-              className="add_cupboard_top"
+              className={styles.add_cupboard_top}
             >
               <img src="cupboard/Union 1.svg" alt="filters"></img>
             </div>
           </div>
           <div
-            className="cupboard_flexbox_middle_1"
+            className={"cupboard_flexbox_middle_1"}
             style={{
               top: position.y,
               left: position.x,
@@ -393,7 +399,7 @@ export default function Cupboard() {
             <CupboardItem />
           </div>
           <div
-            className="cupboard_flexbox_middle_2"
+            className={"cupboard_flexbox_middle_2"}
             style={{
               top: position.y,
               left: position.x + vw,
@@ -433,49 +439,53 @@ export default function Cupboard() {
         <div>
           {modal_cupboard_variable === 0 && (
             <Modal isOpen={isModalOpen} onClose={closeModal}>
-              <div className="add_clothes_modal">
-                <div className="flexbox_add_clothes_modal_1">
-                  <div className="flexbox_add_clothes_image">
+              <div className={styles.add_clothes_modal}>
+                <div className={styles.flexbox_add_clothes_modal_1}>
+                  <div className={styles.flexbox_add_clothes_image}>
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>
-                  <div className="flexbox_add_clothes_not_image">
-                    <div className="flexbox_add_clothes_modal_2">
-                      <div className="flexbox_add_clothes_above_add_new"></div>
-                      <div className="flexbox_add_clothes_add_new">
+                  <div className={styles.flexbox_add_clothes_not_image}>
+                    <div className={styles.flexbox_add_clothes_modal_2}>
+                      <div
+                        className={styles.flexbox_add_clothes_above_add_new}
+                      ></div>
+                      <div className={styles.flexbox_add_clothes_add_new}>
                         <p>ADD NEW</p>
                       </div>
-                      <div className="flexbox_add_clothes_category">
+                      <div className={styles.flexbox_add_clothes_category}>
                         <p>
                           CATEGORY
-                          <span className="flexbox_add_clothes_expand">
+                          <span className={styles.flexbox_add_clothes_expand}>
                             &#9661;
                           </span>
                         </p>
                       </div>
-                      <div className="flexbox_add_clothes_color_area">
-                        <div className="flexbox_add_clothes_color_text">
+                      <div className={styles.flexbox_add_clothes_color_area}>
+                        <div className={styles.flexbox_add_clothes_color_text}>
                           <p>COLOR</p>
                         </div>
-                        <div className="flexbox_add_clothes_modal_colors">
-                          <FlexboxColors color="flexbox_add_black" />
-                          <FlexboxColors color="flexbox_add_white" />
-                          <FlexboxColors color="flexbox_add_red" />
-                          <FlexboxColors color="flexbox_add_orange" />
-                          <FlexboxColors color="flexbox_add_yellow" />
-                          <FlexboxColors color="flexbox_add_green" />
-                          <FlexboxColors color="flexbox_add_aqua" />
-                          <FlexboxColors color="flexbox_add_blue" />
-                          <FlexboxColors color="flexbox_add_purple" />
-                          <FlexboxColors color="flexbox_add_pink" />
-                          <FlexboxColors color="flexbox_add_brown" />
-                          <FlexboxColors color="flexbox_add_beige" />
+                        <div
+                          className={styles.flexbox_add_clothes_modal_colors}
+                        >
+                          <FlexboxColors color={styles.flexbox_add_black} />
+                          <FlexboxColors color={styles.flexbox_add_white} />
+                          <FlexboxColors color={styles.flexbox_add_red} />
+                          <FlexboxColors color={styles.flexbox_add_orange} />
+                          <FlexboxColors color={styles.flexbox_add_yellow} />
+                          <FlexboxColors color={styles.flexbox_add_green} />
+                          <FlexboxColors color={styles.flexbox_add_aqua} />
+                          <FlexboxColors color={styles.flexbox_add_blue} />
+                          <FlexboxColors color={styles.flexbox_add_purple} />
+                          <FlexboxColors color={styles.flexbox_add_pink} />
+                          <FlexboxColors color={styles.flexbox_add_brown} />
+                          <FlexboxColors color={styles.flexbox_add_beige} />
                         </div>
                       </div>
-                      <div className="flexbox_add_clothes_modal_3">
-                        <div className="flexbox_add_clothes_discard">
+                      <div className={styles.flexbox_add_clothes_modal_3}>
+                        <div className={styles.flexbox_add_clothes_discard}>
                           <p>DISCARD</p>
                         </div>
-                        <div className="flexbox_add_clothes_save">
+                        <div className={styles.flexbox_add_clothes_save}>
                           <p>SAVE</p>
                         </div>
                       </div>
@@ -487,7 +497,7 @@ export default function Cupboard() {
                     closeModal();
                     handleUnblurClick();
                   }}
-                  className="flexbox_add_clothes_close"
+                  className={styles.flexbox_add_clothes_close}
                 >
                   <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
                 </div>
@@ -497,34 +507,36 @@ export default function Cupboard() {
         </div>
         {modal_cupboard_variable === 1 && (
           <Modal isOpen={isModalOpen} onClose={closeModal}>
-            <div className="add_clothes_modal">
-              <div className="flexbox_add_clothes_modal_1">
-                <div className="flexbox_add_outfit_images">
-                  <div className="flexbox_add_outfit_images_single">
+            <div className={styles.add_clothes_modal}>
+              <div className={styles.flexbox_add_clothes_modal_1}>
+                <div className={styles.flexbox_add_outfit_images}>
+                  <div className={styles.flexbox_add_outfit_images_single}>
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>
-                  <div className="flexbox_add_outfit_images_single">
+                  <div className={styles.flexbox_add_outfit_images_single}>
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>{" "}
-                  <div className="flexbox_add_outfit_images_single">
+                  <div className={styles.flexbox_add_outfit_images_single}>
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>{" "}
-                  <div className="flexbox_add_outfit_images_single">
+                  <div className={styles.flexbox_add_outfit_images_single}>
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>
                 </div>
-                <div className="flexbox_add_outfit_modal_2">
-                  <div className="flexbox_add_outfit_text">SAVE OUTFIT</div>
-                  <div className="flexbox_add_outfit_title">
-                    title
-                    <div className="flexbox_add_outfit_title_line"></div>
+                <div className={styles.flexbox_add_outfit_modal_2}>
+                  <div className={styles.flexbox_add_outfit_text}>
+                    SAVE OUTFIT
                   </div>
-                  <div className="flexbox_add_outfit_line"></div>
-                  <div className="flexbox_add_outfit_modal_3">
-                    <div className="flexbox_add_outfit_discard">
+                  <div className={styles.flexbox_add_outfit_title}>
+                    title
+                    <div className={styles.flexbox_add_outfit_title_line}></div>
+                  </div>
+                  <div className={styles.flexbox_add_outfit_line}></div>
+                  <div className={styles.flexbox_add_outfit_modal_3}>
+                    <div className={styles.flexbox_add_outfit_discard}>
                       <p>DISCARD</p>
                     </div>
-                    <div className="flexbox_add_outfit_save">
+                    <div className={styles.flexbox_add_outfit_save}>
                       <p>SAVE</p>
                     </div>
                   </div>
@@ -535,7 +547,7 @@ export default function Cupboard() {
                   closeModal();
                   handleUnblurClick();
                 }}
-                className="flexbox_add_clothes_close"
+                className={styles.flexbox_add_clothes_close}
               >
                 <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
               </div>
