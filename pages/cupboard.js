@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "../styles/cupboard.module.css";
 import classNames from "classnames";
+import { useRef } from "react";
 
 function CupboardItem() {
   return (
@@ -104,6 +105,11 @@ function FlexboxColors(props) {
 export default function Cupboard() {
   const [modal_cupboard_variable, set_modal_cupboard_variable] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const cupboard_flexbox_middle_1 = useRef(null);
+  const cupboard_flexbox_middle_2 = useRef(null);
+  const pieces_outfits_moving_container = useRef(null);
+  const pieces_cupboard_top_text = useRef(null);
+  const outfits_cupboard_top_text = useRef(null);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -168,8 +174,8 @@ export default function Cupboard() {
   }, [modal_cupboard_variable]);
   useEffect(() => {
     if (is_moving === 0) {
-      const element = document.querySelector(".cupboard_flexbox_middle_1");
-      const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+      const element = cupboard_flexbox_middle_1.current;
+      const element2 = cupboard_flexbox_middle_2.current;
       element.classList.remove("transition_all_1s");
       element2.classList.remove("transition_all_1s");
     }
@@ -177,8 +183,8 @@ export default function Cupboard() {
 
   const move_outfits = () => {
     set_is_moving((prevIsMoving) => prevIsMoving + 1);
-    const element = document.querySelector(".cupboard_flexbox_middle_1");
-    const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+    const element = cupboard_flexbox_middle_1.current;
+    const element2 = cupboard_flexbox_middle_2.current;
     element.classList.add("transition_all_1s");
     element2.classList.add("transition_all_1s");
     const newPosition = {
@@ -192,16 +198,16 @@ export default function Cupboard() {
   };
   useEffect(() => {
     if (is_moving === 0) {
-      const element = document.querySelector(".cupboard_flexbox_middle_1");
-      const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+      const element = cupboard_flexbox_middle_1.current;
+      const element2 = cupboard_flexbox_middle_2.current;
       element.classList.remove("transition_all_1s");
       element2.classList.remove("transition_all_1s");
     }
   }, [is_moving]);
   const move_pieces = () => {
     set_is_moving((prevIsMoving) => prevIsMoving + 1);
-    const element = document.querySelector(".cupboard_flexbox_middle_1");
-    const element2 = document.querySelector(".cupboard_flexbox_middle_2");
+    const element = cupboard_flexbox_middle_1.current;
+    const element2 = cupboard_flexbox_middle_2.current;
     element.classList.add("transition_all_1s");
     element2.classList.add("transition_all_1s");
     const newPosition = {
@@ -214,11 +220,9 @@ export default function Cupboard() {
     }, 1000);
   };
   const move_pieces_button = () => {
-    const container = document.querySelector(
-      ".pieces_outfits_moving_container"
-    );
-    const text = document.querySelector(".outfits_cupboard_top_text");
-    const text2 = document.querySelector(".pieces_cupboard_top_text");
+    const container = pieces_outfits_moving_container.current;
+    const text = outfits_cupboard_top_text.current;
+    const text2 = pieces_cupboard_top_text.current;
     text.classList.add("transition_all_05s");
     text2.classList.add("transition_all_05s");
     container.classList.add("transition_all_02s");
@@ -230,22 +234,18 @@ export default function Cupboard() {
   };
   useEffect(() => {
     if (is_moving === 0) {
-      const container = document.querySelector(
-        ".pieces_outfits_moving_container"
-      );
-      const text = document.querySelector(".outfits_cupboard_top_text");
-      const text2 = document.querySelector(".pieces_cupboard_top_text");
+      const container = pieces_outfits_moving_container.current;
+      const text = outfits_cupboard_top_text.current;
+      const text2 = pieces_cupboard_top_text.current;
       container.classList.remove("transition_all_02s");
       text.classList.remove("transition_all_05s");
       text2.classList.remove("transition_all_05s");
     }
   }, [is_moving]);
   const move_outfits_button = () => {
-    const container = document.querySelector(
-      ".pieces_outfits_moving_container"
-    );
-    const text = document.querySelector(".outfits_cupboard_top_text");
-    const text2 = document.querySelector(".pieces_cupboard_top_text");
+    const container = pieces_outfits_moving_container.current;
+    const text = outfits_cupboard_top_text.current;
+    const text2 = pieces_cupboard_top_text.current;
     text.classList.add("transition_all_05s");
     text2.classList.add("transition_all_05s");
     container.classList.add("transition_all_02s");
@@ -257,11 +257,9 @@ export default function Cupboard() {
   };
   useEffect(() => {
     if (is_moving === 0) {
-      const container = document.querySelector(
-        ".pieces_outfits_moving_container"
-      );
-      const text = document.querySelector(".outfits_cupboard_top_text");
-      const text2 = document.querySelector(".pieces_cupboard_top_text");
+      const container = pieces_outfits_moving_container.current;
+      const text = outfits_cupboard_top_text.current;
+      const text2 = pieces_cupboard_top_text.current;
       container.classList.remove("transition_all_02s");
       text.classList.remove("transition_all_05s");
       text2.classList.remove("transition_all_05s");
@@ -313,7 +311,8 @@ export default function Cupboard() {
       <body>
         <div className={isBlurred ? styles.blurred : ""}>
           <div
-            className="pieces_outfits_moving_container"
+            className={styles.pieces_outfits_moving_container}
+            ref={pieces_outfits_moving_container}
             style={{
               top: position_top.y,
               left: position_top.x,
@@ -325,13 +324,15 @@ export default function Cupboard() {
           <div className="scrollbar_shadow_firefox"></div>
           <div className={styles.cupboard_top_text}>
             <div
-              className="pieces_cupboard_top_text"
+              className={styles.pieces_cupboard_top_text}
+              ref={pieces_cupboard_top_text}
               style={{ color: piece_color }}
             >
               <p>SINGLE PIECES</p>
             </div>
             <div
-              className="outfits_cupboard_top_text"
+              className={styles.outfits_cupboard_top_text}
+              ref={outfits_cupboard_top_text}
               style={{ color: outfit_color }}
             >
               <p>OUTFITS</p>
@@ -382,7 +383,8 @@ export default function Cupboard() {
             </div>
           </div>
           <div
-            className={"cupboard_flexbox_middle_1"}
+            className={styles.cupboard_flexbox_middle_1}
+            ref={cupboard_flexbox_middle_1}
             style={{
               top: position.y,
               left: position.x,
@@ -399,7 +401,8 @@ export default function Cupboard() {
             <CupboardItem />
           </div>
           <div
-            className={"cupboard_flexbox_middle_2"}
+            className={styles.cupboard_flexbox_middle_2}
+            ref={cupboard_flexbox_middle_2}
             style={{
               top: position.y,
               left: position.x + vw,
