@@ -6,8 +6,75 @@ function Home() {
   return (
     <>
       <body>
+        {/* BACKGROUND */}
         <div className={styles.background_circle1}></div>
         <div className={styles.background_circle2}></div>
+        <div className={styles.background_left}>
+          <div
+            className={classNames(
+              styles.background_left_item,
+              styles.background_left_text1
+            )}
+          >
+            ADD IT
+          </div>
+          <div
+            className={classNames(
+              styles.background_left_item,
+              styles.background_left_text2
+            )}
+          >
+            STYLE IT
+          </div>
+          <div
+            className={classNames(
+              styles.background_left_item,
+              styles.background_left_text3
+            )}
+          >
+            PLAY WITH IT
+          </div>
+          <div
+            className={classNames(
+              styles.background_left_item,
+              styles.background_left_line
+            )}
+          ></div>
+        </div>
+        <div className={styles.background_up}>
+          <div
+            className={classNames(
+              styles.background_up_item,
+              styles.background_up_img
+            )}
+          >
+            <img src="index/Logo.svg" alt="main_image"></img>
+          </div>
+          <div
+            className={classNames(
+              styles.background_up_item,
+              styles.background_up_line1
+            )}
+          ></div>
+          <div
+            className={classNames(
+              styles.background_up_item,
+              styles.background_up_text
+            )}
+          >
+            CHOOSE OUTFITS EFFORTLESSLY
+          </div>
+          <div
+            className={classNames(
+              styles.background_up_item,
+              styles.background_up_line2
+            )}
+          ></div>
+        </div>
+        <div className={styles.background_up_line3}></div>
+        <div className={styles.background_down_line}></div>
+        <div className={styles.background_right_line}></div>
+        {/* MAIN CONTENT */}
         <div className={styles.flexbox_main}>
           <div className={styles.flexbox_main_img}>
             <img src="index/your_personal_wardrobe.svg" alt="main_image"></img>
