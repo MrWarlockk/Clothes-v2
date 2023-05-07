@@ -1,0 +1,106 @@
+.background_circle1 {
+  background-color: #f98770;
+  width: 90vw;
+  height: 90vw;
+  border-radius: 39.5vw;
+  position: absolute;
+  top: -20%;
+  left: 38%;
+  transform: translate(-50%-50%);
+  z-index: -1;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.background_circle2 {
+  background-color: #5a6c73;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 22vw;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  transform: translate(-50%-50%);
+  z-index: -1;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.flexbox_main {
+  position: absolute;
+  width: 40vw;
+  height: 45vh;
+  top: 13%;
+  left: 7.1%;
+  transform: translate(-50%-50%);
+  display: flex;
+  flex-direction: column;
+}
+.flexbox_main_img {
+  flex-basis: 57.5%;
+  margin-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.flexbox_main_text {
+  flex-basis: 42.5%;
+  padding: 0vh 2vw;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3rem;
+  box-sizing: border-box;
+}
+.flexbox_login {
+  padding: 1.65vh 0.65vw;
+  padding-bottom: 0.1vh;
+  position: absolute;
+  width: 20vw;
+  height: 20vh;
+  top: 67%;
+  left: 7.1%;
+  transform: translate(-50%-50%);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.flexbox_login_item {
+  flex-basis: 17.25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.flexbox_login_email {
+  margin-bottom: 1vh;
+  border-radius: 1vw;
+  background-color: #b1bdb9;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.flexbox_login_password {
+  margin-bottom: 1vh;
+  border-radius: 1vw;
+  background-color: #b1bdb9;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.flexbox_login_log_in {
+  margin-bottom: 1vh;
+  border-radius: 1vw;
+  box-sizing: border-box;
+  margin-left: 5.25vw;
+  margin-right: 5.25vw;
+  background-color: #f98770;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.flexbox_login_text1 {
+  flex-basis: 15%;
+  color: #5a6c73;
+}
+.flexbox_login_text2 {
+  color: #5a6c73;
+  flex-basis: 15%;
+}
