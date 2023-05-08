@@ -9,6 +9,7 @@ function Home() {
         {/* BACKGROUND */}
         <div className={styles.background_circle1}></div>
         <div className={styles.background_circle2}></div>
+        <div className={styles.image_right_block}></div>
         <div className={styles.background_left}>
           <div
             className={classNames(
@@ -133,6 +134,44 @@ function Home() {
             )}
           >
             Join Here
+          </div>
+        </div>
+        <div className={styles.images}>
+          <img
+            className={styles.image_left}
+            src="index/login_img1.png"
+            alt="clothes_image1"
+          ></img>
+          <div className={styles.images_middle}>
+            <img
+              className={styles.image_middle1}
+              src="index/login_img2.png"
+              alt="clothes_image2"
+            ></img>
+
+            <img
+              className={styles.image_middle2}
+              src="index/login_img3.png"
+              alt="clothes_image3"
+            ></img>
+
+            <img
+              className={styles.image_middle3}
+              src="index/login_img4.png"
+              alt="clothes_image4"
+            ></img>
+          </div>
+          <div className={styles.images_right}>
+            <img
+              className={styles.image_right1}
+              src="index/login_img5.png"
+              alt="clothes_image5"
+            ></img>
+            <img
+              className={styles.image_right2}
+              src="index/login_img6.png"
+              alt="clothes_image6"
+            ></img>
           </div>
         </div>
         {/*

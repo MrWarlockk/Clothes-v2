@@ -47,7 +47,6 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 1.3rem;
-  box-sizing: border-box;
 }
 .flexbox_login {
   padding: 1.65vh 0.65vw;
@@ -158,6 +157,7 @@
   transform: translate(-50%, -50%);
   width: 2px;
   height: 70vh;
+  z-index: 3;
 }
 .background_up {
   display: flex;
@@ -200,4 +200,52 @@
   transform: translate(-50%, -50%);
   width: 23vw;
   height: 2px;
+  z-index: 3;
+}
+.image_right_block {
+  position: absolute;
+  background-color: #f98770;
+  top: 4%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  width: 26vw;
+  height: 8vh;
+  z-index: 2;
+}
+.image_left {
+  position: absolute;
+  top: 87.5%;
+  left: 41.25%;
+  transform: translate(-50%, -50%);
+  width: 21vw;
+  height: auto;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.images_middle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 58%;
+  left: 63%;
+}
+.images_middle img {
+  width: 21vw;
+  height: auto;
+  margin-bottom: 1.5vh;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.images_right {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 46.5%;
+  left: 84.75%;
+}
+.images_right img {
+  width: 21vw;
+  height: auto;
+  margin-bottom: 1.5vh;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
