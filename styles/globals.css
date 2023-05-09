@@ -36,12 +36,12 @@ body {
 
 .background_line1 {
   position: absolute;
-  background-color: #5a6c73;
+  background-color: black;
   width: 120%;
   height: 2px;
-  z-index: -1;
   top: 2%;
   left: -5%;
+  z-index: -1;
 }
 
 .background_line2 {
@@ -59,9 +59,9 @@ body {
   background-color: black;
   width: 40%;
   height: 1px;
-  z-index: -1;
   top: 97.5%;
   left: 82%;
+  z-index: -1;
 }
 
 .sidebar {
