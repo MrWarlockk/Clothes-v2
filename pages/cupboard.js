@@ -9,16 +9,9 @@ function CupboardItem() {
   return (
     <div className={styles.cupboard_flexbox_middle}>
       <div className={styles.cupboard_single_flexbox_middle_first}>
-        <img
-          src={"images/hoodie.png"}
-          alt="hoodie"
-          style={{
-            height: "27.5vh",
-            width: "19vw",
-            borderTopLeftRadius: "15%",
-            borderTopRightRadius: "15%",
-          }}
-        ></img>
+        <div className={styles.cupboard_img_container}>
+          <img src={"images/hoodie.png"} alt="hoodie"></img>
+        </div>
       </div>
       <div className={styles.cupboard_single_flexbox_middle_second}>
         <div className={styles.cupboard_flexbox_name_date}>

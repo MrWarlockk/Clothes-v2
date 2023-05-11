@@ -164,6 +164,21 @@
   flex-basis: 50%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
+.cupboard_img_container {
+  position: relative;
+  height: 27.5vh;
+  width: 19vw;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  overflow: hidden;
+}
+
+.cupboard_img_container img {
+  object-fit: cover;
+  object-position: top center;
+  height: 100%;
+  width: 100%;
+}
 .cupboard_single_flexbox_middle_second {
   display: flex;
   flex-basis: 10%;

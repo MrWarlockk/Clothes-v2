@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/clothes.module.css";
+import classNames from "classnames";
 
 function Clothes() {
   return (
@@ -13,10 +14,18 @@ function Clothes() {
         <div className={styles.background_circle2}></div>
         <div className={styles.outfit_creator}>
           <div className={styles.outfit_creator_images}>
-            <img src={"clothes/hoodie.png"} alt="hoodie"></img>
-            <img src={"clothes/shirt.png"} alt="shirt"></img>
-            <img src={"clothes/pants.png"} alt="pants"></img>
-            <img src={"clothes/shoes.png"} alt="shoes"></img>
+            <div className={styles.outfit_creator_images_container}>
+              <img src={"clothes/hoodie.png"} alt="hoodie"></img>
+            </div>
+            <div className={styles.outfit_creator_images_container}>
+              <img src={"clothes/shirt.png"} alt="shirt"></img>
+            </div>
+            <div className={styles.outfit_creator_images_container}>
+              <img src={"clothes/pants.png"} alt="pants"></img>
+            </div>
+            <div className={styles.outfit_creator_images_container}>
+              <img src={"clothes/shoes.png"} alt="shoes"></img>
+            </div>
           </div>
           <div className={styles.outfit_creator_bottom}>
             <div className={styles.outfit_creator_save}>SAVE OUTFIT</div>
@@ -33,7 +42,61 @@ function Clothes() {
           </div>
         </div>
         <div className={styles.clothes_menu}>
-          <div className={styles.clothes_menu_list}></div>
+          <div className={styles.clothes_menu_list}>
+            <div className={styles.clothes_menu_list_filters}>
+              <div className={styles.clothes_menu_list_filters_filter}>
+                FILTER
+                <span> &#9660;</span>
+              </div>
+              <div className={styles.clothes_menu_list_filters_color}>
+                <div
+                  className={styles.clothes_menu_list_filters_color_colors}
+                ></div>
+              </div>
+              <div className={styles.clothes_menu_list_filters_cold}>
+                <img
+                  src={"clothes/snowflake-regular.svg"}
+                  alt="snowflake"
+                ></img>
+              </div>
+              <div className={styles.clothes_menu_list_filters_rainy}>
+                <img src={"clothes/canadian-maple-leaf.svg"} alt="rainy"></img>
+              </div>
+              <div className={styles.clothes_menu_list_filters_sad}>
+                <img src={"clothes/face-meh-regular.svg"} alt="sad"></img>
+              </div>
+              <div className={styles.clothes_menu_list_filters_happy}>
+                <img src={"clothes/face-smile-regular.svg"} alt="happy"></img>
+              </div>
+            </div>
+            <div className={styles.clothes_menu_list_images}>
+              <div className={styles.clothes_menu_list_images_container}>
+                <div className={styles.clothes_menu_list_img_container}>
+                  <img src={"clothes/hoodie.png"} alt="hoodie"></img>
+                </div>
+                <div className={styles.clothes_menu_list_img_container}>
+                  <img src={"clothes/shirt.png"} alt="shirt"></img>
+                </div>
+                <div className={styles.clothes_menu_list_img_container}>
+                  <img src={"clothes/pants.png"} alt="pants"></img>
+                </div>
+                <div className={styles.clothes_menu_list_img_container}>
+                  <img src={"clothes/shoes.png"} alt="shoes"></img>
+                </div>
+                <div className={styles.clothes_menu_list_img_container}>
+                  <img src={"clothes/shoes.png"} alt="shoes"></img>
+                </div>
+                <div
+                  className={classNames(
+                    styles.clothes_menu_list_img_container,
+                    styles.clothes_menu_list_add
+                  )}
+                >
+                  <img src={"clothes/Union 1.svg"} alt="shoes"></img>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className={styles.clothes_menu_type}></div>
         </div>
 
