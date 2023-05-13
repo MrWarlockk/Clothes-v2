@@ -435,53 +435,49 @@ export default function Cupboard() {
         <div>
           {modal_cupboard_variable === 0 && (
             <Modal isOpen={isModalOpen} onClose={closeModal}>
-              <div className={styles.add_clothes_modal}>
-                <div className={styles.flexbox_add_clothes_modal_1}>
-                  <div className={styles.flexbox_add_clothes_image}>
+              <div className="add_clothes_modal">
+                <div className="flexbox_add_clothes_modal_1">
+                  <div className="flexbox_add_clothes_image">
                     <img src={"cupboard/photo_img.svg"} alt="photo"></img>
                   </div>
-                  <div className={styles.flexbox_add_clothes_not_image}>
-                    <div className={styles.flexbox_add_clothes_modal_2}>
-                      <div
-                        className={styles.flexbox_add_clothes_above_add_new}
-                      ></div>
-                      <div className={styles.flexbox_add_clothes_add_new}>
+                  <div className="flexbox_add_clothes_not_image">
+                    <div className="flexbox_add_clothes_modal_2">
+                      <div className="flexbox_add_clothes_above_add_new"></div>
+                      <div className="flexbox_add_clothes_add_new">
                         <p>ADD NEW</p>
                       </div>
-                      <div className={styles.flexbox_add_clothes_category}>
+                      <div className="flexbox_add_clothes_category">
                         <p>
                           CATEGORY
-                          <span className={styles.flexbox_add_clothes_expand}>
+                          <span className="flexbox_add_clothes_expand">
                             &#9661;
                           </span>
                         </p>
                       </div>
-                      <div className={styles.flexbox_add_clothes_color_area}>
-                        <div className={styles.flexbox_add_clothes_color_text}>
+                      <div className="flexbox_add_clothes_color_area">
+                        <div className="flexbox_add_clothes_color_text">
                           <p>COLOR</p>
                         </div>
-                        <div
-                          className={styles.flexbox_add_clothes_modal_colors}
-                        >
-                          <FlexboxColors color={styles.flexbox_add_black} />
-                          <FlexboxColors color={styles.flexbox_add_white} />
-                          <FlexboxColors color={styles.flexbox_add_red} />
-                          <FlexboxColors color={styles.flexbox_add_orange} />
-                          <FlexboxColors color={styles.flexbox_add_yellow} />
-                          <FlexboxColors color={styles.flexbox_add_green} />
-                          <FlexboxColors color={styles.flexbox_add_aqua} />
-                          <FlexboxColors color={styles.flexbox_add_blue} />
-                          <FlexboxColors color={styles.flexbox_add_purple} />
-                          <FlexboxColors color={styles.flexbox_add_pink} />
-                          <FlexboxColors color={styles.flexbox_add_brown} />
-                          <FlexboxColors color={styles.flexbox_add_beige} />
+                        <div className="flexbox_add_clothes_modal_colors">
+                          <FlexboxColors color="flexbox_add_black" />
+                          <FlexboxColors color="flexbox_add_white" />
+                          <FlexboxColors color="flexbox_add_red" />
+                          <FlexboxColors color="flexbox_add_orange" />
+                          <FlexboxColors color="flexbox_add_yellow" />
+                          <FlexboxColors color="flexbox_add_green" />
+                          <FlexboxColors color="flexbox_add_aqua" />
+                          <FlexboxColors color="flexbox_add_blue" />
+                          <FlexboxColors color="flexbox_add_purple" />
+                          <FlexboxColors color="flexbox_add_pink" />
+                          <FlexboxColors color="flexbox_add_brown" />
+                          <FlexboxColors color="flexbox_add_beige" />
                         </div>
                       </div>
-                      <div className={styles.flexbox_add_clothes_modal_3}>
-                        <div className={styles.flexbox_add_clothes_discard}>
+                      <div className="flexbox_add_clothes_modal_3">
+                        <div className="flexbox_add_clothes_discard">
                           <p>DISCARD</p>
                         </div>
-                        <div className={styles.flexbox_add_clothes_save}>
+                        <div className="flexbox_add_clothes_save">
                           <p>SAVE</p>
                         </div>
                       </div>
@@ -493,7 +489,7 @@ export default function Cupboard() {
                     closeModal();
                     handleUnblurClick();
                   }}
-                  className={styles.flexbox_add_clothes_close}
+                  className="flexbox_add_clothes_close"
                 >
                   <img src="cupboard/x_icon.svg" alt="expand_icon"></img>
                 </div>
