@@ -176,22 +176,22 @@ function Home() {
         </div>
         {
           <div className="sidebar">
-            <Link href={"/menu"}>
+            <Link className="sidebar_link" href={"/menu"}>
               <div className={"sidebar_menu"}>
                 <img src={"sidebar/menu.svg"} alt="menu"></img>
               </div>
             </Link>
-            <Link href={"/clothes"}>
+            <Link className="sidebar_link" href={"/clothes"}>
               <div className={"sidebar_clothes"}>
                 <img src={"sidebar/wieszak.svg"} alt="menu"></img>
               </div>
             </Link>
-            <Link href={"/cupboard"}>
+            <Link className="sidebar_link" href={"/cupboard"}>
               <div className={"sidebar_cupboard"}>
                 <img src={"sidebar/szafa.svg"} alt="menu"></img>
               </div>
             </Link>
-            <Link href={"/account"}>
+            <Link className="sidebar_link" href={"/account"}>
               <div className={"sidebar_account"}>
                 <img src={"sidebar/moje konto.svg"} alt="menu"></img>
               </div>
