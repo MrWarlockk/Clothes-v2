@@ -221,3 +221,15 @@ body {
     pointer-events: none;
   }
 }
+.sidebar-item.selected {
+  background-color: #06788f;
+  margin-left: 0;
+  padding-left: 17.5%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
+    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
+    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
+  filter: invert(100%);
+  cursor: inherit;
+}

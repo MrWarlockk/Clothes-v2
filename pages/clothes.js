@@ -1,8 +1,19 @@
 import Link from "next/link";
 import styles from "../styles/clothes.module.css";
 import classNames from "classnames";
+import { useState } from "react";
 
 function Clothes() {
+  const inverted_style = {
+    filter: "invert(100%)",
+  };
+
+  const [selectedItem, setSelectedItem] = useState("item1");
+
+  const handleItemClick = (item) => {
+    console.log("Clicked item:", item);
+    setSelectedItem(item);
+  };
   return (
     <>
       <body>
@@ -97,7 +108,72 @@ function Clothes() {
               </div>
             </div>
           </div>
-          <div className={styles.clothes_menu_type}></div>
+          <div className={styles.clothes_menu_type}>
+            <div
+              className={classNames(
+                styles.clothes_menu_type_all,
+                `sidebar-item ${selectedItem === "item1" ? "selected" : ""}`
+              )}
+              onClick={() => handleItemClick("item1")}
+            >
+              <div className={styles.sidebar_container}>
+                <div className={styles.clothes_menu_type_all_flex}>
+                  <img src={"clothes/hoodie1.svg"} alt="coat"></img>
+                  <img src={"clothes/shirt1.svg"} alt="shirt"></img>
+                  <img
+                    style={inverted_style}
+                    src={"clothes/jeans1.svg"}
+                    alt="pants"
+                  ></img>
+                  <img src={"clothes/shoes1.svg"} alt="shoes"></img>
+                </div>
+              </div>
+            </div>
+            <div
+              className={classNames(
+                styles.clothes_menu_type_hoodie,
+                `sidebar-item ${selectedItem === "item2" ? "selected" : ""}`
+              )}
+              onClick={() => handleItemClick("item2")}
+            >
+              <div className={styles.sidebar_container}>
+                <img src={"clothes/hoodie1.svg"} alt="coat"></img>
+              </div>
+            </div>
+            <div
+              className={classNames(
+                styles.clothes_menu_type_shirt,
+                `sidebar-item ${selectedItem === "item3" ? "selected" : ""}`
+              )}
+              onClick={() => handleItemClick("item3")}
+            >
+              <div className={styles.sidebar_container}>
+                <img src={"clothes/shirt1.svg"} alt="shirt"></img>
+              </div>
+            </div>
+            <div
+              className={classNames(
+                styles.clothes_menu_type_pants,
+                `sidebar-item ${selectedItem === "item4" ? "selected" : ""}`
+              )}
+              onClick={() => handleItemClick("item4")}
+            >
+              <div className={styles.sidebar_container}>
+                <img src={"clothes/jeans1.svg"} alt="pants"></img>
+              </div>
+            </div>
+            <div
+              className={classNames(
+                styles.clothes_menu_type_shoes,
+                `sidebar-item ${selectedItem === "item5" ? "selected" : ""}`
+              )}
+              onClick={() => handleItemClick("item5")}
+            >
+              <div className={styles.sidebar_container}>
+                <img src={"clothes/shoes1.svg"} alt="shoes"></img>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="sidebar">
