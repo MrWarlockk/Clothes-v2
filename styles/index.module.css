@@ -94,14 +94,26 @@
   background-color: #f98770;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   color: white;
+  cursor: pointer;
+}
+.flexbox_login_log_in:hover {
+  filter: brightness(90%);
 }
 .flexbox_login_text1 {
   flex-basis: 15%;
   color: #5a6c73;
+  cursor: pointer;
+}
+.flexbox_login_text1:hover {
+  text-decoration: underline;
 }
 .flexbox_login_text2 {
   color: #5a6c73;
   flex-basis: 15%;
+  cursor: pointer;
+}
+.flexbox_login_text2:hover {
+  text-decoration: underline;
 }
 .background_left {
   display: flex;
