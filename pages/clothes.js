@@ -139,7 +139,9 @@ function Clothes() {
                       styles.clothes_menu_list_add
                     )}
                   >
-                    <img src={"clothes/Union 1.svg"} alt="shoes"></img>
+                    <div>
+                      <img src={"clothes/Union 1.svg"} alt="shoes"></img>
+                    </div>
                   </div>
                 </div>
               </div>

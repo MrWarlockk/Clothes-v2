@@ -87,11 +87,17 @@ body {
   align-self: stretch;
   justify-content: center;
 }
+.sidebar_menu:hover {
+  filter: brightness(80%);
+}
 .sidebar_menu_on {
   background-color: white;
   border-top-right-radius: 2vw;
   border-bottom-right-radius: 2vw;
   box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+.sidebar_menu_on:hover {
+  filter: brightness(100%);
 }
 .sidebar_menu_on img {
   filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
@@ -105,11 +111,17 @@ body {
   align-self: stretch;
   justify-content: center;
 }
+.sidebar_clothes:hover {
+  filter: brightness(80%);
+}
 .sidebar_clothes_on {
   background-color: white;
   border-top-right-radius: 2vw;
   border-bottom-right-radius: 2vw;
   box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+.sidebar_clothes_on:hover {
+  filter: brightness(100%);
 }
 .sidebar_clothes_on img {
   filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
@@ -123,11 +135,17 @@ body {
   align-self: stretch;
   justify-content: center;
 }
+.sidebar_cupboard:hover {
+  filter: brightness(80%);
+}
 .sidebar_cupboard_on {
   background-color: white;
   border-top-right-radius: 2vw;
   border-bottom-right-radius: 2vw;
   box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+.sidebar_cupboard_on:hover {
+  filter: brightness(100%);
 }
 .sidebar_cupboard_on img {
   filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
@@ -141,11 +159,17 @@ body {
   align-self: stretch;
   justify-content: center;
 }
+.sidebar_account:hover {
+  filter: brightness(80%);
+}
 .sidebar_account_on {
   background-color: white;
   border-top-right-radius: 2vw;
   border-bottom-right-radius: 2vw;
   box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+.sidebar_account_on:hover {
+  filter: brightness(100%);
 }
 .sidebar_account_on img {
   filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
@@ -155,6 +179,9 @@ body {
   position: fixed;
   bottom: 8vh;
   right: 1.5vw;
+}
+.sidebar_logout:hover {
+  filter: brightness(80%);
 }
 
 .transition_all_1s {

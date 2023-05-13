@@ -90,9 +90,16 @@
   z-index: 1;
   color: #f98770;
 }
-
+.flexbox_options_text1:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .flexbox_options_text2 {
   margin-left: 3.1vh;
+}
+.flexbox_options_text2:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .flexbox_login_item1 {
@@ -172,6 +179,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.flexbox_login_item5:hover {
+  filter: brightness(90%);
 }
 .flexbox_login_item52 {
   flex-basis: 50%;
