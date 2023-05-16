@@ -46,6 +46,7 @@ function Clothes() {
           <div className="background_line1"></div>
           <div className="background_line2"></div>
           <div className="background_line3"></div>
+          <div className={styles.scrollbar_shadow_firefox}></div>
           <div className={styles.background_icon}>
             <img src={"clothes/logo_green.svg"} alt="icon"></img>
           </div>

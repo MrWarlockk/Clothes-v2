@@ -314,7 +314,7 @@ export default function Cupboard() {
           <div className="background_line1"></div>
           <div className="background_line2"></div>
           <div className="background_line3"></div>
-          <div className="scrollbar_shadow_firefox"></div>
+          <div className={styles.scrollbar_shadow_firefox}></div>
           <div className={styles.cupboard_top_text}>
             <div
               className={styles.pieces_cupboard_top_text}

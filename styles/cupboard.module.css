@@ -1,4 +1,22 @@
 /*----------------------CUPBOARD---------------------*/
+@-moz-document url-prefix() {
+  .cupboard_flexbox_middle_1 {
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #f7f7f7;
+  }
+  .scrollbar_shadow_firefox {
+    width: 8px;
+    background-color: transparent;
+    height: 82vh;
+    position: absolute;
+    z-index: 1;
+    top: 13.9vh;
+    right: 6vw;
+    box-shadow: inset -3px 0px 5px -3px rgba(0, 0, 0, 0.2),
+      inset 3px 0px 5px -3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+  }
+}
 
 .pieces_cupboard_top_text {
   position: absolute;
@@ -105,7 +123,6 @@
   background-color: lightblue;
   margin-top: 1.6vh;
 }
-
 .cupboard_flexbox_middle_1 {
   position: absolute;
   display: flex;

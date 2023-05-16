@@ -1,3 +1,5 @@
+/* #region -----------SCROLLBARS------------ */
+/* CHROME */
 .clothes_menu_list_images_container::-webkit-scrollbar-thumb {
   background: #b1bdb9;
 }
@@ -17,6 +19,28 @@
 .clothes_menu_list_images_container::-webkit-scrollbar-track {
   background: #f7f7f7;
 }
+
+/* FIREFOX */
+@-moz-document url-prefix() {
+  .clothes_menu_list_images_container {
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #f7f7f7;
+  }
+  .scrollbar_shadow_firefox {
+    width: 8px;
+    background-color: transparent;
+    height: 76.5vh;
+    position: absolute;
+    z-index: 1;
+    top: 12.9vh;
+    right: 14.45vw;
+    box-shadow: inset -3px 0px 5px -3px rgba(0, 0, 0, 0.2),
+      inset 3px 0px 5px -3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+  }
+}
+/* #endregion */
+/* #region -----------BACKGROUND-------------*/
 .background_circle1 {
   background-color: #f98770;
   width: 79vw;
@@ -55,11 +79,13 @@
 }
 .background_icon {
   position: absolute;
-  top: 91.5%;
+  bottom: 1%;
   left: 1%;
   transform: translate(-50%-50%);
   z-index: -1;
 }
+/* #endregion */
+/* #region ------------CREATOR---------------*/
 .outfit_creator {
   display: flex;
   position: absolute;
@@ -82,8 +108,8 @@
 
 .outfit_creator_images_container {
   position: relative;
-  height: 35.5vh;
-  width: 35.5vh;
+  height: calc(1.4 * 25.5vh);
+  width: calc(0.75 * 25.5vw);
   border-radius: 5%;
   overflow: hidden;
 }
@@ -104,14 +130,14 @@
   box-sizing: border-box;
   flex-basis: 41.5%;
   background-color: #5a6c73;
-  border-radius: 1vw;
+  border-radius: 10vw;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   margin-right: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #f5f5f5;
-  font-size: 16px;
+  font-size: calc(8px + 0.4vw);
   cursor: pointer;
 }
 .outfit_creator_save:hover {
@@ -128,7 +154,7 @@
   justify-content: center;
   align-items: center;
   color: #f5f5f5;
-  font-size: 16px;
+  font-size: calc(8px + 0.4vw);
   cursor: pointer;
 }
 .outfit_creator_generate > div:hover {
@@ -136,7 +162,7 @@
 }
 .outfit_creator_generate_text {
   flex-basis: 81%;
-  border-radius: 1vw;
+  border-radius: 10vw;
   margin-right: 5%;
 }
 
@@ -145,10 +171,12 @@
   border-radius: 50%;
 }
 .outfit_creator_generate_arrow {
-  font-size: 22px;
+  font-size: calc(16px + 0.4vw);
   display: inline-block;
-  transform: scale(1, 0.6) translate(0vw, 0vh);
+  transform: scale(1, 0.6);
 }
+/* #endregion */
+/* #region -------------LIST-----------------*/
 .clothes_menu {
   display: flex;
   position: absolute;
@@ -168,8 +196,8 @@
   height: 40px;
   background-color: #b1bdb9;
   display: flex;
-  border-top-left-radius: 1vw;
-  border-top-right-radius: 1vw;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
   box-sizing: border-box;
   padding: 1.25% 0;
   box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.25);
@@ -197,16 +225,16 @@
   flex-basis: 36%;
   box-sizing: border-box;
   margin-left: 1%;
-  border-radius: 1vw;
+  border-radius: 10vw;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  font-size: 16px;
+  font-size: calc(8px + 0.4vw);
   color: white;
 }
 
 .clothes_menu_list_filters_filter > span {
-  font-size: 20px;
+  font-size: calc(12px + 0.4vw);
   display: inline-block;
   transform: scale(1, 0.5);
   margin-left: 0.2vw;
@@ -214,7 +242,7 @@
 }
 
 .clothes_menu_list_filters_color {
-  flex-basis: 5.54%;
+  flex-basis: 28px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -226,19 +254,19 @@
   border-radius: 50%;
 }
 .clothes_menu_list_filters_cold {
-  flex-basis: 5.54%;
+  flex-basis: 28px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_rainy {
-  flex-basis: 5.54%;
+  flex-basis: 28px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_sad {
-  flex-basis: 5.54%;
+  flex-basis: 28px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_happy {
-  flex-basis: 5.54%;
+  flex-basis: 28px;
   border-radius: 50%;
 }
 .clothes_menu_list_images {
@@ -303,7 +331,6 @@
 }
 
 .clothes_menu_type {
-  /*background-color: red;*/
   flex-basis: 19.75%;
   display: flex;
   flex-direction: column;
@@ -320,16 +347,13 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+.clothes_menu_type > div > div > img {
+  height: calc(1.4 * 5.5vh);
+  width: calc(0.75 * 5.5vw);
+}
 .clothes_menu_type_pants img {
   filter: invert(100%);
 }
-
-/*
-.sidebar_menu_on img {
-  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
-    brightness(97%) contrast(102%);
-}
-*/
 .clothes_menu_type_all_flex {
   display: flex;
   flex-direction: row;
@@ -339,8 +363,9 @@
   row-gap: 10px;
 }
 .clothes_menu_type_all_flex > img {
-  height: 35px;
-  width: 35px;
+  height: calc(1.4 * 2.5vh);
+  width: calc(0.75 * 2.5vw);
   margin-left: 2px;
   margin-right: 2px;
 }
+/* #endregion */
