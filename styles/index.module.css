@@ -1,4 +1,5 @@
-/* ---------------------BACKGROUND--------------------- */
+/* #region ---------------------BACKGROUND--------------------- */
+/* #region -----------------GENERAL----------------*/
 .background_circle1 {
   background-color: #f98770;
   width: 90vw;
@@ -23,6 +24,8 @@
   z-index: -1;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
+/* #endregion */
+/* #region ----------------LEFT SIDE-------------- */
 .background_left {
   display: flex;
   position: absolute;
@@ -62,6 +65,8 @@
   margin: 0.99vw 0vh;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+/* #endregion */
+/* #region -----------BOTTOM AND RIGHT SIDE------- */
 .background_down_line {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -71,6 +76,7 @@
   width: 22vw;
   height: 2px;
 }
+
 .background_right_line {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -81,6 +87,8 @@
   height: 70vh;
   z-index: 3;
 }
+/* #endregion */
+/* #region ----------------TOP SIDE-------------- */
 .background_up {
   display: flex;
   position: absolute;
@@ -125,8 +133,10 @@
   height: 2px;
   z-index: 3;
 }
-
-/* -----------------CONTENT----------------- */
+/* #endregion */
+/* #endregion */
+/* #region ----------------------CONTENT----------------------- */
+/* #region --------------TITLE/DESC---------------- */
 .flexbox_main {
   position: absolute;
   width: 40vw;
@@ -158,6 +168,8 @@
   font-weight: 500;
   line-height: 1.3rem;
 }
+/* #endregion */
+/* #region ----------------LOGIN------------------- */
 .flexbox_login {
   padding: 1.65vh 0.65vw;
   padding-bottom: 0.1vh;
@@ -225,7 +237,8 @@
 .flexbox_login_text2:hover {
   text-decoration: underline;
 }
-
+/* #endregion */
+/* #region -------------RIGHT IMAGES--------------- */
 .image_right_block {
   position: absolute;
   background-color: #f98770;
@@ -273,3 +286,5 @@
   margin-bottom: 1.5vh;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+/* #endregion */
+/* #endregion */
