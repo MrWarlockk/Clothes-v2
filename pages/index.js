@@ -82,15 +82,11 @@ function Home() {
           </div>
           <div className={styles.flexbox_main_text}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
-              elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
-              Phasellus tempus gravida pharetra. Fusce ornare elit eros, in
-              sollicitudin magna laoreet pharetra. Duis sed tortor sit amet nibh
-              ultricies tincidunt nec eget augue. Fusce maximus vulputate massa,
-              sed bibendum libero. Nullam erat lectus, volutpat sed felis ut,
-              volutpat euismod felis. Fusce non arcu sed lorem ultrices
-              sollicitudin.
+              Add your own images to your own personal curboard!
+              <br></br>
+              Design your own outfits and save them later!
+              <br></br>
+              Never feel the need to think about what to wear ever again!
             </p>
           </div>
         </div>
