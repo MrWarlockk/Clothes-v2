@@ -1,3 +1,4 @@
+/* #region BODY */
 body {
   background-color: white;
   font-family: "Lato", sans-serif;
@@ -9,6 +10,8 @@ body {
   padding: 0;
   z-index: -2;
 }
+/* #endregion */
+/* #region BACKGROUND */
 .background_circle1 {
   background-color: #f98770;
   width: 79vw;
@@ -63,14 +66,15 @@ body {
   left: 82%;
   z-index: -1;
 }
-
+/* #endregion */
+/* #region SIDEBAR */
 .sidebar {
   position: fixed;
   display: flex;
   flex-direction: column;
   top: 5.35vh;
   right: 0vw;
-  width: 5vw;
+  width: 94px;
   height: 87vh;
   padding-top: 2vh;
   align-items: center;
@@ -195,7 +199,20 @@ body {
 .sidebar_logout:hover {
   filter: brightness(80%);
 }
-
+.sidebar-item.selected {
+  background-color: #06788f;
+  margin-left: 0;
+  padding-left: 17.5%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
+    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
+    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
+  filter: invert(100%);
+  cursor: inherit;
+}
+/* #endregion */
+/* #region TRANSITIONS */
 .transition_all_1s {
   transition: all 1s ease;
 }
@@ -208,7 +225,8 @@ body {
 .transition_all_02s {
   transition: all 0.2s ease;
 }
-
+/* #endregion */
+/* #region CHROME SCROLLBAR */
 ::-webkit-scrollbar {
   width: 0.9vw;
 }
@@ -240,19 +258,8 @@ body {
   border-radius: 1vh;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
-.sidebar-item.selected {
-  background-color: #06788f;
-  margin-left: 0;
-  padding-left: 17.5%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
-    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
-    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
-  filter: invert(100%);
-  cursor: inherit;
-}
+/* #endregion */
+/* #region ADD CLOTHES MODAL */
 .add_clothes_modal {
   position: absolute;
   top: 48%;
@@ -433,7 +440,10 @@ body {
   background-color: #596c73;
   cursor: pointer;
 }
+/* #endregion */
+/* #region BLUR */
 .blurred {
   filter: blur(25px);
   transition: filter 0.05s ease-in-out;
 }
+/* #endregion */
