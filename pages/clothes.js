@@ -278,7 +278,7 @@ function Clothes() {
             </div>
           </Modal>
         </div>
-        <div className="sidebar">
+        <div id={styles.sidebar_hide} className="sidebar">
           <Link className="sidebar_link" href={"/menu"}>
             <div className={"sidebar_menu"}>
               <img src={"sidebar/menu.svg"} alt="menu"></img>
@@ -299,6 +299,36 @@ function Clothes() {
           </Link>
           <Link className="sidebar_link" href={"/"}>
             <div className={"sidebar_logout"}>
+              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
+            </div>
+          </Link>
+        </div>
+        <div className={styles.sidebar}>
+          <Link className={styles.sidebar_link} href={"/menu"}>
+            <div className={styles.sidebar_menu}>
+              <img src={"sidebar/menu.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <div
+            className={classNames(
+              styles.sidebar_clothes,
+              styles.sidebar_clothes_on
+            )}
+          >
+            <img src={"sidebar/wieszak.svg"} alt="menu"></img>
+          </div>
+          <Link className={styles.sidebar_link} href={"/cupboard"}>
+            <div className={styles.sidebar_cupboard}>
+              <img src={"sidebar/szafa.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link className={styles.sidebar_link} href={"/account"}>
+            <div className={styles.sidebar_account}>
+              <img src={"sidebar/moje konto.svg"} alt="menu"></img>
+            </div>
+          </Link>
+          <Link className={styles.sidebar_link} href={"/"}>
+            <div className={styles.sidebar_logout}>
               <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
             </div>
           </Link>

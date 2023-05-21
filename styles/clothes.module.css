@@ -84,6 +84,12 @@
   transform: translate(-50%-50%);
   z-index: -1;
 }
+@media (max-width: 1080px) {
+  .background_icon img {
+    width: 0px;
+    height: auto;
+  }
+}
 /* #endregion */
 /* #region ------------CREATOR---------------*/
 .outfit_creator {
@@ -104,6 +110,7 @@
   justify-content: space-evenly;
   row-gap: 2.5vh;
   margin-bottom: 1vh;
+  overflow: auto;
 }
 
 .outfit_creator_images_container {
@@ -180,7 +187,6 @@
     top: 7.35%;
     left: 1.75%;
     width: 55vw;
-    background-color: red;
   }
 }
 @media (max-width: 1440px) {
@@ -188,14 +194,33 @@
     top: 7.35%;
     left: 1.75%;
     width: 55vw;
-    background-color: blue;
   }
   .outfit_creator_images_container {
-    position: relative;
     height: 280px;
     width: 280px;
-    border-radius: 5%;
-    overflow: hidden;
+  }
+  .outfit_creator_images {
+    flex-basis: 80%;
+  }
+  .outfit_creator_images {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2.5vh;
+    margin-bottom: 1vh;
+    overflow: auto;
+  }
+}
+@media (max-width: 1080px) {
+  .outfit_creator {
+    top: 6.25%;
+    left: 9.25%;
+    width: 350px;
+    height: 82.5vh;
+    background-color: #e7e3e4;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
   }
 }
 /* #endregion */
@@ -216,24 +241,24 @@
 }
 
 .clothes_menu_list_filters {
-  height: 40px;
+  height: 32px;
+  padding-bottom: 8px;
   background-color: #b1bdb9;
   display: flex;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  box-sizing: border-box;
-  padding: 1.25% 0;
   box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.25);
+  flex-wrap: wrap;
 }
 .clothes_menu_list_filters > div {
   background-color: #5a6c73;
-  margin-right: 1.5%;
+  margin-right: 8px;
   display: flex;
-  height: 100%;
-  min-height: 100%;
+  height: 32px;
   justify-content: center;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  margin-top: 4px;
 }
 .clothes_menu_list_filters > div:hover {
   filter: brightness(90%);
@@ -254,6 +279,7 @@
   font-weight: 500;
   font-size: 14px;
   color: white;
+  margin-top: 4px;
 }
 
 .clothes_menu_list_filters_filter > span {
@@ -265,7 +291,7 @@
 }
 
 .clothes_menu_list_filters_color {
-  flex-basis: 28px;
+  flex-basis: 32px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -277,19 +303,19 @@
   border-radius: 50%;
 }
 .clothes_menu_list_filters_cold {
-  flex-basis: 28px;
+  flex-basis: 32px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_rainy {
-  flex-basis: 28px;
+  flex-basis: 32px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_sad {
-  flex-basis: 28px;
+  flex-basis: 32px;
   border-radius: 50%;
 }
 .clothes_menu_list_filters_happy {
-  flex-basis: 28px;
+  flex-basis: 32px;
   border-radius: 50%;
 }
 .clothes_menu_list_images {
@@ -308,7 +334,7 @@
 .clothes_menu_list_images_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-content: flex-start;
   flex-basis: 100%;
   gap: 0vw;
@@ -363,7 +389,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 17.5%;
+  margin-left: 8.75%;
   flex-basis: 11.25%;
   margin-bottom: 17%;
   border-radius: 15%;
@@ -371,8 +397,8 @@
   cursor: pointer;
 }
 .clothes_menu_type > div > div > img {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 .clothes_menu_type_pants img {
   filter: invert(100%);
@@ -386,9 +412,253 @@
   row-gap: 10px;
 }
 .clothes_menu_type_all_flex > img {
-  height: 38px;
-  width: 38px;
+  height: 36px;
+  width: 36px;
   margin-left: 2px;
   margin-right: 2px;
+}
+@media (max-width: 1440px) {
+  .clothes_menu_list_filters {
+    height: 60px;
+  }
+  .clothes_menu_list_filters_filter {
+    flex-basis: 100%;
+  }
+  .clothes_menu_list_filters_color {
+    flex-basis: 24px;
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+  .clothes_menu_list_filters_cold {
+    flex-basis: 24px;
+    border-radius: 50%;
+  }
+  .clothes_menu_list_filters_rainy {
+    flex-basis: 24px;
+    border-radius: 50%;
+  }
+  .clothes_menu_list_filters_sad {
+    flex-basis: 24px;
+    border-radius: 50%;
+  }
+  .clothes_menu_list_filters_happy {
+    flex-basis: 24px;
+    border-radius: 50%;
+  }
+  .clothes_menu_list_filters > div {
+    height: 24px;
+  }
+  .clothes_menu_list_filters_filter {
+    min-height: 32px;
+  }
+}
+.sidebar {
+  width: 0vw;
+  height: 0px;
+}
+@media (max-width: 1080px) {
+  .clothes_menu {
+    display: flex;
+    position: absolute;
+    top: 6.25%;
+    left: 58.25%;
+    transform: translate(-50%-50%);
+    height: 86.4vh;
+    width: 34.5vw;
+  }
+  .sidebar {
+    width: 87vw;
+    height: 60px;
+  }
+  #sidebar_hide {
+    width: 0;
+    height: 0;
+  }
+  #sidebar_hide div img {
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 720px) {
+  .clothes_menu_type_all_flex > img {
+    height: 22px;
+    width: 22px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .clothes_menu_type {
+    flex-basis: 64px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6%;
+  }
+  .outfit_creator {
+    top: 6.25%;
+    left: 9.25%;
+    width: 250px;
+    height: 82.5vh;
+    background-color: #e7e3e4;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .outfit_creator_images_container {
+    height: 200px;
+    width: 200px;
+  }
+}
+/* #endregion */
+/* #region SIDEBAR */
+.sidebar {
+  position: fixed;
+  display: flex;
+  transform: translate(-50%, -50%);
+  bottom: -3.5%;
+  left: 50%;
+  align-items: center;
+  background-color: #f98770;
+  border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
+}
+.sidebar_link {
+  cursor: default;
+}
+
+.sidebar_menu {
+  padding-top: 2vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_menu:hover {
+  filter: brightness(80%);
+}
+.sidebar_menu_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_menu_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_menu_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_clothes {
+  padding-top: 2vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_clothes:hover {
+  filter: brightness(80%);
+}
+.sidebar_clothes_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_clothes_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_clothes_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_cupboard {
+  padding-top: 2vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_cupboard:hover {
+  filter: brightness(80%);
+}
+.sidebar_cupboard_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_cupboard_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_cupboard_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_account {
+  padding-top: 2vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_account:hover {
+  filter: brightness(80%);
+}
+.sidebar_account_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_account_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_account_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_logout {
+  position: fixed;
+  right: 30px;
+  bottom: 8%;
+  transform: translate(-50%-50%);
+  cursor: pointer;
+}
+.sidebar_logout:hover {
+  filter: brightness(80%);
+}
+.sidebar-item.selected {
+  background-color: #06788f;
+  margin-left: 0;
+  padding-left: 8.75%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
+    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
+    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
+  filter: invert(100%);
+  cursor: inherit;
 }
 /* #endregion */

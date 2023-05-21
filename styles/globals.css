@@ -192,8 +192,9 @@ body {
 }
 .sidebar_logout {
   position: fixed;
-  bottom: 8vh;
-  right: 1.5vw;
+  right: 30px;
+  bottom: 8%;
+  transform: translate(-50%-50%);
   cursor: pointer;
 }
 .sidebar_logout:hover {
@@ -202,7 +203,7 @@ body {
 .sidebar-item.selected {
   background-color: #06788f;
   margin-left: 0;
-  padding-left: 17.5%;
+  padding-left: 8.75%;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
