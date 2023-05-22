@@ -217,10 +217,47 @@
     top: 6.25%;
     left: 9.25%;
     width: 350px;
-    height: 82.5vh;
+    height: 80.5vh;
     background-color: #e7e3e4;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+  }
+  .outfit_creator_bottom {
+    margin-left: 2.35vw;
+    margin-right: 2.25vw;
+  }
+  .outfit_creator_save {
+    margin-right: 2vw;
+    font-size: 12px;
+  }
+  .outfit_creator_generate > div {
+    font-size: 12px;
+  }
+}
+@media (max-width: 720px) {
+  .outfit_creator {
+    top: 6.25%;
+    left: 9.25%;
+    width: 250px;
+    height: 80.5vh;
+    background-color: #e7e3e4;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .outfit_creator_images_container {
+    height: 200px;
+    width: 200px;
+  }
+  .outfit_creator_bottom {
+    margin-left: 2.35vw;
+    margin-right: 2.25vw;
+  }
+  .outfit_creator_save {
+    margin-right: 0.4vw;
+    font-size: 12px;
+  }
+  .outfit_creator_generate > div {
+    font-size: 12px;
   }
 }
 /* #endregion */
@@ -452,10 +489,6 @@
     min-height: 32px;
   }
 }
-.sidebar {
-  width: 0vw;
-  height: 0px;
-}
 @media (max-width: 1080px) {
   .clothes_menu {
     display: flex;
@@ -463,20 +496,8 @@
     top: 6.25%;
     left: 58.25%;
     transform: translate(-50%-50%);
-    height: 86.4vh;
+    height: 84.4vh;
     width: 34.5vw;
-  }
-  .sidebar {
-    width: 87vw;
-    height: 60px;
-  }
-  #sidebar_hide {
-    width: 0;
-    height: 0;
-  }
-  #sidebar_hide div img {
-    width: 0;
-    height: 0;
   }
 }
 @media (max-width: 720px) {
@@ -492,32 +513,42 @@
     flex-direction: column;
     padding-top: 6%;
   }
-  .outfit_creator {
-    top: 6.25%;
-    left: 9.25%;
-    width: 250px;
-    height: 82.5vh;
-    background-color: #e7e3e4;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+}
+@media (max-width: 650px) {
+  .clothes_menu_list_filters {
+    height: 90px;
   }
-  .outfit_creator_images_container {
-    height: 200px;
-    width: 200px;
+  .clothes_menu_list_filters_filter {
+    flex-basis: 100%;
+  }
+  .clothes_menu_list_filters_happy {
+    margin-left: 4px;
+  }
+}
+@media (max-width: 555px) {
+  .clothes_menu_list_filters_sad {
+    margin-left: 4px;
+  }
+  .clothes_menu_list_filters_happy {
+    margin-left: 0px;
   }
 }
 /* #endregion */
 /* #region SIDEBAR */
 .sidebar {
+  width: 0vw;
+  height: 0px;
+}
+.sidebar {
   position: fixed;
   display: flex;
   transform: translate(-50%, -50%);
-  bottom: -3.5%;
+  bottom: -30px;
   left: 50%;
   align-items: center;
   background-color: #f98770;
-  border-top-left-radius: 2vh;
-  border-top-right-radius: 2vh;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .sidebar_link {
   cursor: default;
@@ -660,5 +691,31 @@
     inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
   filter: invert(100%);
   cursor: inherit;
+}
+@media (max-width: 1080px) {
+  .sidebar {
+    width: 87vw;
+    height: 60px;
+  }
+  #sidebar_hide {
+    width: 0;
+    height: 0;
+  }
+  #sidebar_hide div img {
+    width: 0;
+    height: 0;
+  }
+  @media (max-height: 640px) {
+    .sidebar {
+      width: 87vw;
+      height: 40px;
+    }
+    .sidebar img {
+      max-height: 20px;
+    }
+  }
+  .sidebar_clothes_on img {
+    padding-top: 2px;
+  }
 }
 /* #endregion */
