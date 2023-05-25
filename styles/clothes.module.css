@@ -1,5 +1,27 @@
 /* #region -----------SCROLLBARS------------ */
 /* CHROME */
+/* LEFT SIDE IMAGES */
+.outfit_creator_images::-webkit-scrollbar-thumb {
+  background: #b1bdb9;
+}
+
+.outfit_creator_images::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.outfit_creator_images::-webkit-scrollbar-track:hover {
+  background: #f7f7f7;
+}
+
+.outfit_creator_images::-webkit-scrollbar-thumb:active {
+  background-color: #666;
+}
+
+.outfit_creator_images::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+
+/* RIGHT SIDE IMAGES */
 .clothes_menu_list_images_container::-webkit-scrollbar-thumb {
   background: #b1bdb9;
 }
@@ -22,21 +44,15 @@
 
 /* FIREFOX */
 @-moz-document url-prefix() {
+  /* LEFT SIDE IMAGES */
+  .outfit_creator_images {
+    scrollbar-width: thin;
+    scrollbar-color: #bbb transparent;
+  }
+  /* RIGHT SIDE IMAGES */
   .clothes_menu_list_images_container {
     scrollbar-width: thin;
-    scrollbar-color: #bbb #f7f7f7;
-  }
-  .scrollbar_shadow_firefox {
-    width: 8px;
-    background-color: transparent;
-    height: 76.5vh;
-    position: absolute;
-    z-index: 1;
-    top: 12.9vh;
-    right: 14.45vw;
-    box-shadow: inset -3px 0px 5px -3px rgba(0, 0, 0, 0.2),
-      inset 3px 0px 5px -3px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
+    scrollbar-color: #bbb transparent;
   }
 }
 /* #endregion */
@@ -236,13 +252,7 @@
 }
 @media (max-width: 720px) {
   .outfit_creator {
-    top: 6.25%;
-    left: 9.25%;
     width: 250px;
-    height: 80.5vh;
-    background-color: #e7e3e4;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
   }
   .outfit_creator_images_container {
     height: 200px;
@@ -411,9 +421,9 @@
 .clothes_menu_list_add:hover {
   filter: brightness(90%);
 }
-.clothes_menu_list_add img {
-  height: 40%;
-  width: auto;
+.clothes_menu_list_add div img {
+  padding-top: 4px;
+  height: 7vh;
 }
 
 .clothes_menu_type {

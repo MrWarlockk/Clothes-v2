@@ -141,7 +141,7 @@ function Clothes() {
                     )}
                   >
                     <div>
-                      <img src={"clothes/Union 1.svg"} alt="shoes"></img>
+                      <img src={"clothes/Union 1.svg"} alt="plus"></img>
                     </div>
                   </div>
                 </div>
