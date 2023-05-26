@@ -153,7 +153,7 @@
   box-sizing: border-box;
   flex-basis: 41.5%;
   background-color: #5a6c73;
-  border-radius: 10vw;
+  border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   margin-right: 8%;
   display: flex;
@@ -185,7 +185,7 @@
 }
 .outfit_creator_generate_text {
   flex-basis: 81%;
-  border-radius: 10vw;
+  border-radius: 20px;
   margin-right: 5%;
 }
 
@@ -268,6 +268,17 @@
   }
   .outfit_creator_generate > div {
     font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .outfit_creator {
+    width: 250px;
+    left: 2.5%;
+  }
+}
+@media (max-height: 340px) {
+  .outfit_creator {
+    height: 74.5vh;
   }
 }
 /* #endregion */
@@ -375,8 +386,8 @@
   box-shadow: inset 5px 0px 5px -5px rgba(0, 0, 0, 0.2),
     inset -5px 0px 5px -5px rgba(0, 0, 0, 0.2),
     inset 0px -5px 5px -5px rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 1vw;
-  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .clothes_menu_list_images_container {
   display: flex;
@@ -393,6 +404,8 @@
   position: relative;
   height: 10.5vh;
   width: 10.5vh;
+  min-width: 80px;
+  min-height: 80px;
   margin: 0.25vw;
   margin-top: 0;
   border-radius: 15%;
@@ -424,6 +437,7 @@
 .clothes_menu_list_add div img {
   padding-top: 4px;
   height: 7vh;
+  min-height: 60px;
 }
 
 .clothes_menu_type {
@@ -499,6 +513,17 @@
     min-height: 32px;
   }
 }
+@media (max-width: 1440px) {
+  .clothes_menu_type {
+    flex-basis: 64px;
+  }
+  .clothes_menu_type_all_flex > img {
+    height: 22px;
+    width: 22px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
 @media (max-width: 1080px) {
   .clothes_menu {
     display: flex;
@@ -512,10 +537,10 @@
 }
 @media (max-width: 720px) {
   .clothes_menu_type_all_flex > img {
-    height: 22px;
-    width: 22px;
-    margin-left: 2px;
-    margin-right: 2px;
+    height: 18px;
+    width: 18px;
+    margin-left: 1px;
+    margin-right: 1px;
   }
   .clothes_menu_type {
     flex-basis: 64px;
@@ -541,6 +566,29 @@
   }
   .clothes_menu_list_filters_happy {
     margin-left: 0px;
+  }
+}
+@media (max-height: 640px) {
+  .clothes_menu_type > div > div > img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-height: 340px) {
+  .clothes_menu {
+    top: 6.25%;
+    left: 58.25%;
+    height: 78vh;
+  }
+  .clothes_menu_type > div > div > img {
+    height: 25px;
+    width: 25px;
+  }
+  .clothes_menu_type_all_flex > img {
+    height: 18px;
+    width: 18px;
+    margin-left: 1px;
+    margin-right: 1px;
   }
 }
 /* #endregion */
