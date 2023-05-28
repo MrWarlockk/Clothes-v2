@@ -1,13 +1,25 @@
 import Link from "next/link";
+import styles from "./styles/sidebar_clothes.module.css";
+import classNames from "classnames";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   return (
-    <div className="sidebar">
-      <div className={"sidebar_menu" + " " + "sidebar_menu_on"}>
-        <img src={"sidebar/menu.svg"} alt="menu"></img>
-      </div>
+    <div id={styles.sidebar_hide} className={styles.sidebar}>
+      <Link className="sidebar_link" href={"/menu"}>
+        <div
+          className={`sidebar_menu ${
+            props.page_number === 0 ? "sidebar_menu_on" : ""
+          }`}
+        >
+          <img src={"sidebar/menu.svg"} alt="menu"></img>
+        </div>
+      </Link>
       <Link className="sidebar_link" href={"/clothes"}>
-        <div className={"sidebar_clothes"}>
+        <div
+          className={classNames(styles.sidebar_clothes, {
+            [styles.sidebar_clothes_on]: props.page_number === 1,
+          })}
+        >
           <img src={"sidebar/wieszak.svg"} alt="menu"></img>
         </div>
       </Link>

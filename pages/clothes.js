@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Sidebar from "@component/components/sidebar";
 import styles from "../styles/clothes.module.css";
 import classNames from "classnames";
 import { useState } from "react";
@@ -278,31 +279,10 @@ function Clothes() {
             </div>
           </Modal>
         </div>
-        <div id={styles.sidebar_hide} className="sidebar">
-          <Link className="sidebar_link" href={"/menu"}>
-            <div className={"sidebar_menu"}>
-              <img src={"sidebar/menu.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <div className={"sidebar_clothes" + " " + "sidebar_clothes_on"}>
-            <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-          </div>
-          <Link className="sidebar_link" href={"/cupboard"}>
-            <div className={"sidebar_cupboard"}>
-              <img src={"sidebar/szafa.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/account"}>
-            <div className={"sidebar_account"}>
-              <img src={"sidebar/moje konto.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/"}>
-            <div className={"sidebar_logout"}>
-              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-            </div>
-          </Link>
-        </div>
+        {
+          /*SIDEBAR*/
+          <Sidebar page_number={1} />
+        }
         <div className={styles.sidebar}>
           <Link className={styles.sidebar_link} href={"/menu"}>
             <div className={styles.sidebar_menu}>
