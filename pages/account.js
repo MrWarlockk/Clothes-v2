@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Sidebar from "@component/components/sidebar";
+import Sidebar_small from "@component/components/sidebar_small";
 import classNames from "classnames";
 import styles from "../styles/account.module.css";
 
@@ -157,31 +158,8 @@ export default function MyAccount() {
           </div>
         </div>
 
-        <div className="sidebar">
-          <Link className="sidebar_link" href={"/menu"}>
-            <div className={"sidebar_menu"}>
-              <img src={"sidebar/menu.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/clothes"}>
-            <div className={"sidebar_clothes"}>
-              <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/cupboard"}>
-            <div className={"sidebar_cupboard"}>
-              <img src={"sidebar/szafa.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <div className={"sidebar_account" + " " + "sidebar_account_on"}>
-            <img src={"sidebar/moje konto.svg"} alt="menu"></img>
-          </div>
-          <Link className="sidebar_link" href={"/"}>
-            <div className={"sidebar_logout"}>
-              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-            </div>
-          </Link>
-        </div>
+        <Sidebar page_number={3} />
+        <Sidebar_small page_number={3} />
       </body>
     </>
   );

@@ -1,5 +1,6 @@
 import Modal from "../components/modal_add_clothing";
-import Link from "next/link";
+import Sidebar from "@component/components/sidebar";
+import Sidebar_small from "@component/components/sidebar_small";
 import { useState, useEffect } from "react";
 import styles from "../styles/cupboard.module.css";
 import classNames from "classnames";
@@ -406,31 +407,8 @@ export default function Cupboard() {
           </div>
         </div>
 
-        <div className="sidebar">
-          <Link className="sidebar_link" href={"/menu"}>
-            <div className={"sidebar_menu"}>
-              <img src={"sidebar/menu.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/clothes"}>
-            <div className={"sidebar_clothes"}>
-              <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <div className={"sidebar_cupboard" + " " + "sidebar_cupboard_on"}>
-            <img src={"sidebar/szafa.svg"} alt="menu"></img>
-          </div>
-          <Link className="sidebar_link" href={"/account"}>
-            <div className={"sidebar_account"}>
-              <img src={"sidebar/moje konto.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/"}>
-            <div className={"sidebar_logout"}>
-              <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-            </div>
-          </Link>
-        </div>
+        <Sidebar page_number={2} />
+        <Sidebar_small page_number={2} />
         {/* ADD CLOTHES MODAL */}
         <div>
           {modal_cupboard_variable === 0 && (

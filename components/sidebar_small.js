@@ -1,10 +1,10 @@
 import Link from "next/link";
-import styles from "./styles/sidebar_clothes.module.css";
+import styles from "./styles/sidebar_small.module.css";
 import classNames from "classnames";
 
-export default function Sidebar(props) {
+export default function Sidebar_small(props) {
   return (
-    <div id={styles.sidebar_hide} className={styles.sidebar}>
+    <div className={styles.sidebar}>
       <Link className={styles.sidebar_link} href={"/menu"}>
         <div
           className={classNames(styles.sidebar_menu, {
@@ -14,6 +14,7 @@ export default function Sidebar(props) {
           <img src={"sidebar/menu.svg"} alt="menu"></img>
         </div>
       </Link>
+
       <Link className={styles.sidebar_link} href={"/clothes"}>
         <div
           className={classNames(styles.sidebar_clothes, {
