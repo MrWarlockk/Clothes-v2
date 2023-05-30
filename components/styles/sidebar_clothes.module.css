@@ -159,7 +159,16 @@
     width: 0px;
     height: 0px;
   }
+  .sidebar_menu_on {
+    width: 0px;
+  }
   .sidebar_clothes_on {
+    width: 0px;
+  }
+  .sidebar_cupboard_on {
+    width: 0px;
+  }
+  .sidebar_account_on {
     width: 0px;
   }
 
