@@ -1,4 +1,4 @@
-/*----------------------CUPBOARD---------------------*/
+/*#region ---------------SIDEBAR--------------- */
 @-moz-document url-prefix() {
   .cupboard_flexbox_middle_1 {
     scrollbar-width: thin;
@@ -17,7 +17,8 @@
     pointer-events: none;
   }
 }
-
+/*#endregion*/
+/*#region -----------------TOP------------------*/
 .pieces_cupboard_top_text {
   position: absolute;
   top: 7.2vh;
@@ -54,10 +55,10 @@
   border: 0;
 }
 .filters_cupboard_top {
-  flex-basis: 4vw;
+  flex-basis: 78px;
   background-color: #b1bdb9;
   margin-right: 1.9vw;
-  height: 7vh;
+  height: 78px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +94,7 @@
 .pieces_outfits_moving_container {
   position: fixed;
   width: 20vw;
-  height: 5.9vh;
+  height: 6vh;
   border-radius: 40px;
   background-color: #f98770;
   z-index: 1;
@@ -101,10 +102,10 @@
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .add_cupboard_top {
-  flex-basis: 4vw;
+  flex-basis: 78px;
   background-color: #f98770;
   margin-left: 2vw;
-  height: 7vh;
+  height: 78px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +116,109 @@
 .add_cupboard_top:hover {
   filter: brightness(90%);
 }
+/* #region -----RESPONSIVENESS-------*/
+@media (max-width: 1600px) {
+  .top_cupboard {
+    transform: translate(-3vw, 0px);
+  }
+  .pieces_outfits_moving_container {
+    transform: translate(-3vw, 0px);
+  }
+  .pieces_cupboard_top_text {
+    transform: translate(-50%, -50%) translate(-3vw, 0px);
+  }
+  .outfits_cupboard_top_text {
+    transform: translate(-50%, -50%) translate(-3vw, 0px);
+  }
+}
+@media (max-width: 1200px) {
+  .pieces_cupboard_top_text {
+    font-size: 20px;
+  }
+  .outfits_cupboard_top_text {
+    font-size: 20px;
+  }
+  .add_cupboard_top {
+    height: 60px;
+    flex-basis: 60px;
+  }
+  .add_cupboard_top img {
+    width: 50%;
+    height: 50%;
+  }
+  .filters_cupboard_top {
+    height: 60px;
+    flex-basis: 60px;
+  }
+  .filters_cupboard_top img {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .pieces_cupboard_top_text {
+    font-size: 16px;
+  }
+  .outfits_cupboard_top_text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .pieces_cupboard_top_text {
+    font-size: 12px;
+  }
+  .outfits_cupboard_top_text {
+    font-size: 12px;
+  }
+}
+@media (max-height: 720px) {
+  .add_cupboard_top {
+    height: 60px;
+    flex-basis: 60px;
+  }
+  .add_cupboard_top img {
+    width: 50%;
+    height: 50%;
+  }
+  .filters_cupboard_top {
+    height: 60px;
+    flex-basis: 60px;
+  }
+  .filters_cupboard_top img {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-height: 540px) {
+  .single_pieces_cupboard_top {
+    height: 10vh;
+  }
+  .outfits_cupboard_top {
+    height: 10vh;
+  }
+  .pieces_outfits_moving_container {
+    height: 10vh;
+    transform: translate(-3vw, -2vh);
+  }
+  .add_cupboard_top {
+    height: 40px;
+    flex-basis: 40px;
+  }
+  .filters_cupboard_top {
+    height: 40px;
+    flex-basis: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  @media (max-height: 540px) {
+    .pieces_outfits_moving_container {
+      transform: translate(0px, -2vh);
+    }
+  }
+}
+/* #endregion */
+/* #endregion */
+/* #region ---------------MIDDLE----------------*/
 .cupboard_flexbox_middle_all {
   display: flex;
   margin-left: 2vw;
@@ -139,24 +243,6 @@
   width: 85vw;
   z-index: 0;
 }
-@media (max-width: 1600px) {
-  .cupboard_flexbox_middle_1 {
-    margin-left: 5.5vw;
-  }
-  .top_cupboard {
-    transform: translate(-3vw, 0px);
-  }
-  .pieces_outfits_moving_container {
-    transform: translate(-3vw, 0px);
-  }
-  .pieces_cupboard_top_text {
-    transform: translate(-50%, -50%) translate(-3vw, 0px);
-  }
-  .outfits_cupboard_top_text {
-    transform: translate(-50%, -50%) translate(-3vw, 0px);
-  }
-}
-
 .cupboard_outfit_images {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +260,7 @@
 .cupboard_flexbox_middle_2 {
   position: absolute;
   display: flex;
+  justify-content: center;
   margin-left: 8.5vw;
   padding-right: 0.5vw;
   margin-top: 1.6vh;
@@ -302,6 +389,26 @@
 .edit_single_flexbox:hover {
   filter: brightness(90%);
 }
+/* RESPONSIVENESS */
+@media (max-width: 1600px) {
+  .cupboard_flexbox_middle_1 {
+    margin-left: 5.5vw;
+  }
+}
+@media (max-height: 540px) {
+  .cupboard_flexbox_middle_1 {
+    margin-top: 11.6vh;
+    height: 72vh;
+  }
+}
+@media (max-width: 1600px) {
+  .cupboard_flexbox_middle_2 {
+    margin-left: 5.5vw;
+  }
+}
+
+/* #endregion */
+/* #region ----------ADD CLOTHES MODAL----------*/
 .add_clothes_modal {
   position: absolute;
   top: 48%;
@@ -473,8 +580,8 @@
   top: 0.5%;
   left: 101%;
   transform: translate(-50%, -50%);
-  height: 3.4vh;
-  width: 1.9vw;
+  height: 35px;
+  width: 35px;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -482,11 +589,8 @@
   background-color: #596c73;
   cursor: pointer;
 }
-.blurred {
-  filter: blur(25px);
-  transition: filter 0.05s ease-in-out;
-}
-
+/* #endregion */
+/* #region ----------ADD OUTFIT MODAL---------- */
 .flexbox_add_outfit_images {
   display: flex;
   flex-wrap: wrap;
@@ -567,4 +671,9 @@
   color: white;
   border-radius: 2.5vh;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+/* #endregion */
+.blurred {
+  filter: blur(25px);
+  transition: filter 0.05s ease-in-out;
 }

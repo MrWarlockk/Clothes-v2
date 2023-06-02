@@ -302,8 +302,8 @@ body {
   top: 0.5%;
   left: 101%;
   transform: translate(-50%, -50%);
-  height: 3.4vh;
-  width: 1.9vw;
+  height: 35px;
+  width: 35px;
   border-radius: 100%;
   display: flex;
   align-items: center;

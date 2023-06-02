@@ -182,7 +182,16 @@
       max-height: 20px;
     }
   }
+  .sidebar_menu_on img {
+    padding-top: 2px;
+  }
   .sidebar_clothes_on img {
+    padding-top: 2px;
+  }
+  .sidebar_cupboard_on img {
+    padding-top: 2px;
+  }
+  .sidebar_account_on img {
     padding-top: 2px;
   }
 }
