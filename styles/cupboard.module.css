@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20%;
+  border-radius: 15px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -73,8 +73,8 @@
   background-color: #f7f7f7;
   color: #b1bdb9;
   height: 6vh;
-  border-top-left-radius: 2vw;
-  border-bottom-left-radius: 2vw;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
   z-index: 0;
   box-shadow: inset -2px 10px 10px -10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -84,8 +84,8 @@
   background-color: #f7f7f7;
   height: 6vh;
   margin-left: -2vw;
-  border-top-right-radius: 2vw;
-  border-bottom-right-radius: 2vw;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
   box-shadow: inset -2px 10px 10px -10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
@@ -94,7 +94,7 @@
   position: fixed;
   width: 20vw;
   height: 5.9vh;
-  border-radius: 20vw;
+  border-radius: 40px;
   background-color: #f98770;
   z-index: 1;
   pointer-events: all;
@@ -108,7 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20%;
+  border-radius: 15px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -134,9 +134,15 @@
   row-gap: 2.75vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  justify-content: center;
   height: 82vh;
   width: 85vw;
   z-index: 0;
+}
+@media (max-width: 1600px) {
+  .cupboard_flexbox_middle_1 {
+    margin-left: 2.5vw;
+  }
 }
 
 .cupboard_outfit_images {
@@ -174,24 +180,24 @@
   flex-direction: column;
   margin-left: 1.8vw;
   background-color: #f7f7f7;
-  height: 39.5vh;
-  width: 19vw;
-  border-radius: 15%;
+  height: 425px;
+  width: 358px;
+  border-radius: 60px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .cupboard_single_flexbox_middle_first {
   background-color: azure;
-  border-top-right-radius: 15%;
-  border-top-left-radius: 15%;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
   flex-basis: 50%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 .cupboard_img_container {
   position: relative;
-  height: 27.5vh;
-  width: 19vw;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
+  height: 296px;
+  width: 358px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
   overflow: hidden;
 }
 
@@ -213,9 +219,9 @@
 }
 .cupboard_single_name {
   display: flex;
-  max-height: 3vh;
-  margin-bottom: -0.25vh;
-  margin-top: 0.1vh;
+  max-height: 30px;
+  margin-bottom: -3px;
+  margin-top: 1px;
   align-items: center;
   font-size: 18px;
   font-weight: 700;
@@ -224,7 +230,7 @@
 .cupboard_single_date {
   font-size: 12px;
   display: flex;
-  max-height: 1vh;
+  max-height: 10px;
   align-items: center;
   color: #b1bdb9;
 }
@@ -232,8 +238,10 @@
   max-height: 3vh;
   flex-basis: 60%;
   margin-right: 1.4vw;
-  margin-top: 1vh;
+  margin-top: 10px;
   text-align: end;
+}
+.cupboard_single_heart img {
   cursor: pointer;
 }
 .cupboard_single_heart img:hover {
@@ -252,14 +260,13 @@
 .delete_single_flexbox {
   background-color: #f98770;
   color: white;
-  padding-left: 2.6vw;
-  padding-right: 2.6vw;
-  max-height: 4.15vh;
+  flex-basis: 158px;
+  height: 42px;
   margin-top: -0.4vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.5vw;
+  border-radius: 20px;
   font-weight: 700;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -269,14 +276,13 @@
 }
 .edit_single_flexbox {
   background-color: #e7e3e4;
-  padding-left: 3.1vw;
-  padding-right: 3.1vw;
-  max-height: 4.15vh;
+  flex-basis: 158px;
+  height: 42px;
   margin-top: -0.4vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.5vw;
+  border-radius: 20px;
   font-weight: 700;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;

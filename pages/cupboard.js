@@ -24,11 +24,7 @@ function CupboardItem() {
           </div>
         </div>
         <div className={styles.cupboard_single_heart}>
-          <img
-            src={"cupboard/Icon awesome-heart.svg"}
-            alt="heart"
-            style={{ height: "3.5vh", width: "3.5vh" }}
-          ></img>
+          <img src={"cupboard/Icon awesome-heart.svg"} alt="heart"></img>
         </div>
       </div>
       <div className={styles.cupboard_single_flexbox_middle_third}>
