@@ -141,7 +141,19 @@
 }
 @media (max-width: 1600px) {
   .cupboard_flexbox_middle_1 {
-    margin-left: 2.5vw;
+    margin-left: 5.5vw;
+  }
+  .top_cupboard {
+    transform: translate(-3vw, 0px);
+  }
+  .pieces_outfits_moving_container {
+    transform: translate(-3vw, 0px);
+  }
+  .pieces_cupboard_top_text {
+    transform: translate(-50%, -50%) translate(-3vw, 0px);
+  }
+  .outfits_cupboard_top_text {
+    transform: translate(-50%, -50%) translate(-3vw, 0px);
   }
 }
 
