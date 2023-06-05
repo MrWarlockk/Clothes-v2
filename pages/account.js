@@ -6,11 +6,6 @@ import styles from "../styles/account.module.css";
 export default function MyAccount() {
   return (
     <>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-      </style>
-
       <title> Account page </title>
 
       <div className="background_circle1"></div>

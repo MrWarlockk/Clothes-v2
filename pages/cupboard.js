@@ -286,11 +286,6 @@ export default function Cupboard() {
   /*----------------------------------------------------------*/
   return (
     <>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-      </style>
-
       <title> Cupboard page </title>
 
       <div className={isBlurred ? styles.blurred : ""}>

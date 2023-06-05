@@ -1,4 +1,38 @@
-/*#region ---------------SIDEBAR--------------- */
+/*#region ---------------SCROLLBAR--------------- */
+/*CHROME*/
+.cupboard_flexbox_middle_1::-webkit-scrollbar {
+  min-width: 10px;
+  width: 0.9vw;
+}
+
+.cupboard_flexbox_middle_1::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.5);
+}
+
+.cupboard_flexbox_middle_1::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  border-radius: 20px;
+}
+
+.cupboard_flexbox_middle_1::-webkit-scrollbar-track:hover {
+  border-radius: 20px;
+  background: #f7f7f7;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.cupboard_flexbox_middle_1::-webkit-scrollbar-thumb:active {
+  border-radius: 20px;
+  background-color: #666;
+}
+
+.cupboard_flexbox_middle_1::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/*FIREFOX*/
 @-moz-document url-prefix() {
   .cupboard_flexbox_middle_1 {
     scrollbar-width: thin;
