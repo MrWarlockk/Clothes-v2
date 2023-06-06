@@ -17,56 +17,26 @@ export default function MyAccount() {
         <div className={styles.login_background}>
           <div className={styles.login_rectangle}>
             <div className={styles.flexbox_username}>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item1,
-                  styles.flexbox_username_text
-                )}
-              >
+              <div className={classNames(styles.flexbox_username_text)}>
                 <p>Username</p>
               </div>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item12,
-                  styles.flexbox_username_rectangle
-                )}
-              >
+              <div className={classNames(styles.flexbox_username_rectangle)}>
                 <p>admin</p>
               </div>
             </div>
             <div className={styles.flexbox_password}>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item2,
-                  styles.flexbox_password_text
-                )}
-              >
+              <div className={classNames(styles.flexbox_password_text)}>
                 <p>Password</p>
               </div>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item22,
-                  styles.flexbox_password_rectangle
-                )}
-              >
+              <div className={classNames(styles.flexbox_password_rectangle)}>
                 <p>*****</p>
               </div>
             </div>
             <div className={styles.flexbox_options}>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item3,
-                  styles.flexbox_options_text1
-                )}
-              >
+              <div className={classNames(styles.flexbox_options_text)}>
                 <p>Reset Password</p>
               </div>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item3,
-                  styles.flexbox_options_text2
-                )}
-              >
+              <div className={classNames(styles.flexbox_options_text)}>
                 <p>Change E-mail</p>
               </div>
             </div>

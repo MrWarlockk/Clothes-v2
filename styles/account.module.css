@@ -23,18 +23,29 @@
   flex-basis: 50%;
   height: 100px;
   display: flex;
-  margin-top: 0vh;
-  margin-bottom: 0vh;
-}
-.flexbox_username_rectangle {
-  color: #f98770;
-  font-size: 19px;
-  font-weight: 700;
 }
 .flexbox_username_text {
   font-size: 35px;
   color: #5a6c73;
   font-weight: 700;
+  flex-basis: 26%;
+  margin-left: 10.75vh;
+  align-self: center;
+}
+.flexbox_username_rectangle {
+  color: #f98770;
+  font-size: 19px;
+  font-weight: 700;
+  flex-basis: 47.5%;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 20px;
+  height: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* PASSWORD */
@@ -42,18 +53,47 @@
   flex-basis: 50%;
   height: 100px;
   display: flex;
-  margin-top: 0vh;
 }
 
-.flexbox_password_rectangle {
-  color: #f98770;
-  font-size: 19px;
-  font-weight: 700;
-}
 .flexbox_password_text {
   font-size: 35px;
   color: #5a6c73;
   font-weight: 700;
+  flex-basis: 26%;
+  align-self: center;
+}
+.flexbox_password_rectangle {
+  color: #f98770;
+  font-size: 19px;
+  font-weight: 700;
+  flex-basis: 47.5%;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 20px;
+  height: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* OPTIONS */
+.flexbox_options {
+  flex-basis: 20%;
+  height: 20px;
+  font-size: 16px;
+  margin-top: -13vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  z-index: 1;
+  color: #f98770;
+  transform: translate(20vw, 0);
+}
+.flexbox_options_text:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* EMAIL */
@@ -65,82 +105,17 @@
   margin-top: -15vh;
 }
 
-.flexbox_email_rectangle {
-  margin-left: 20.3vh;
-  color: #f98770;
-  font-size: 19px;
-  font-weight: 700;
-}
 .flexbox_email_text {
   font-size: 35px;
   color: #5a6c73;
   font-weight: 700;
 }
 
-.flexbox_options {
-  flex-basis: 100%;
-  height: 20px;
-  font-size: 16px;
-  margin-top: -13vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 23.2vh;
-  font-weight: 700;
-  z-index: 1;
+.flexbox_email_rectangle {
+  margin-left: 20.3vh;
   color: #f98770;
-}
-.flexbox_options_text1:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.flexbox_options_text2 {
-  margin-left: 3.1vh;
-}
-.flexbox_options_text2:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.flexbox_login_item1 {
-  flex-basis: 50%;
-  margin-left: 10.75vh;
-  align-self: center;
-}
-
-.flexbox_login_item12 {
-  flex-basis: 70%;
-  margin-left: -6.5vh;
-  margin-right: 7.75vh;
-  align-self: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-radius: 5vh;
-  max-height: 38%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flexbox_login_item2 {
-  flex-basis: 50%;
-  margin-left: 2.75vh;
-  align-self: center;
-}
-.flexbox_login_item22 {
-  flex-basis: 70%;
-  margin-left: -6.5vh;
-  margin-right: 16.5vh;
-  align-self: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-radius: 5vh;
-  max-height: 38%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 19px;
+  font-weight: 700;
 }
 
 .flexbox_login_item4 {
