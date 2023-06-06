@@ -26,95 +26,66 @@ export default function MyAccount() {
             </div>
             <div className={styles.flexbox_password}>
               <div className={classNames(styles.flexbox_password_text)}>
-                <p>Password</p>
+                Password
               </div>
               <div className={classNames(styles.flexbox_password_rectangle)}>
-                <p>*****</p>
+                *****
               </div>
             </div>
             <div className={styles.flexbox_options}>
               <div className={classNames(styles.flexbox_options_text)}>
-                <p>Reset Password</p>
+                Reset Password
               </div>
               <div className={classNames(styles.flexbox_options_text)}>
-                <p>Change E-mail</p>
+                Change E-mail
               </div>
             </div>
             <div className={styles.flexbox_email}>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item4,
-                  styles.flexbox_email_text
-                )}
-              >
-                <p>E-mail</p>
+              <div className={classNames(styles.flexbox_email_text)}>
+                E-mail
               </div>
-              <div
-                className={classNames(
-                  styles.flexbox_login_item42,
-                  styles.flexbox_email_rectangle
-                )}
-              >
-                <p>admin@mail.com</p>
+              <div className={classNames(styles.flexbox_email_rectangle)}>
+                admin@mail.com
               </div>
               <div className={styles.flexbox_login_item43}></div>
             </div>
-            <div
-              className={classNames(
-                styles.flexbox_login_item5,
-                styles.flexbox_edit_rectangle
-              )}
-            >
-              <p>EDIT</p>
+            <div className={classNames(styles.flexbox_edit_rectangle)}>
+              EDIT
             </div>
-            <div
-              className={classNames(
-                styles.flexbox_login_item52,
-                styles.flexbox_edit_rectangle
-              )}
-            ></div>
-            <div className={styles.flexbox_email2}></div>
-            <div className={styles.flexbox_login_item6}></div>
-            <div className={styles.flexbox_login_item7}></div>
+            <div className={classNames(styles.flexbox_edit_rectangle)}></div>
             <div className={styles.flexbox_end_text}>
-              <div className={styles.flexbox_login_item8}>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris iaculis molestie augue ut gravida. Nunc lectus massa,
-                  pretium et elit in, dapibus pharetra metus. Vestibulum non
-                  tempor nibh. Phasellus tempus gravida pharetra. Fusce ornare
-                  elit eros, in sollicitudin magna laoreet pharetra. Duis sed
-                  tortor sit amet nibh ultricies tincidunt nec eget augue. Fusce
-                  maximus vulputate massa, sed bibendum libero. Nullam erat
-                  lectus, volutpat sed felis ut, volutpat euismod felis. Fusce
-                  non arcu sed lorem ultrices sollicitudin.
-                </p>
+              <div className={styles.flexbox_login_end}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
+                elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
+                Phasellus tempus gravida pharetra. Fusce ornare elit eros, in
+                sollicitudin magna laoreet pharetra. Duis sed tortor sit amet
+                nibh ultricies tincidunt nec eget augue. Fusce maximus vulputate
+                massa, sed bibendum libero. Nullam erat lectus, volutpat sed
+                felis ut, volutpat euismod felis. Fusce non arcu sed lorem
+                ultrices sollicitudin.
               </div>
-              <div className={styles.flexbox_login_item8}>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris iaculis molestie augue ut gravida. Nunc lectus massa,
-                  pretium et elit in, dapibus pharetra metus. Vestibulum non
-                  tempor nibh. Phasellus tempus gravida pharetra. Fusce ornare
-                  elit eros, in sollicitudin magna laoreet pharetra. Duis sed
-                  tortor sit amet nibh ultricies tincidunt nec eget augue. Fusce
-                  maximus vulputate massa, sed bibendum libero. Nullam erat
-                  lectus, volutpat sed felis ut, volutpat euismod felis. Fusce
-                  non arcu sed lorem ultrices sollicitudin.
-                </p>
+              <div className={styles.flexbox_login_end}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
+                elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
+                Phasellus tempus gravida pharetra. Fusce ornare elit eros, in
+                sollicitudin magna laoreet pharetra. Duis sed tortor sit amet
+                nibh ultricies tincidunt nec eget augue. Fusce maximus vulputate
+                massa, sed bibendum libero. Nullam erat lectus, volutpat sed
+                felis ut, volutpat euismod felis. Fusce non arcu sed lorem
+                ultrices sollicitudin.
               </div>
-              <div className={styles.flexbox_login_item8}>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris iaculis molestie augue ut gravida. Nunc lectus massa,
-                  pretium et elit in, dapibus pharetra metus. Vestibulum non
-                  tempor nibh. Phasellus tempus gravida pharetra. Fusce ornare
-                  elit eros, in sollicitudin magna laoreet pharetra. Duis sed
-                  tortor sit amet nibh ultricies tincidunt nec eget augue. Fusce
-                  maximus vulputate massa, sed bibendum libero. Nullam erat
-                  lectus, volutpat sed felis ut, volutpat euismod felis. Fusce
-                  non arcu sed lorem ultrices sollicitudin.
-                </p>
+              <div className={styles.flexbox_login_end}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
+                elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
+                Phasellus tempus gravida pharetra. Fusce ornare elit eros, in
+                sollicitudin magna laoreet pharetra. Duis sed tortor sit amet
+                nibh ultricies tincidunt nec eget augue. Fusce maximus vulputate
+                massa, sed bibendum libero. Nullam erat lectus, volutpat sed
+                felis ut, volutpat euismod felis. Fusce non arcu sed lorem
+                ultrices sollicitudin.
               </div>
             </div>
           </div>
