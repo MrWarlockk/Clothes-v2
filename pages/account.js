@@ -47,14 +47,13 @@ export default function MyAccount() {
               <div className={classNames(styles.flexbox_email_rectangle)}>
                 admin@mail.com
               </div>
-              <div className={styles.flexbox_login_item43}></div>
+              <div className={classNames(styles.flexbox_edit_rectangle)}>
+                EDIT
+              </div>
             </div>
-            <div className={classNames(styles.flexbox_edit_rectangle)}>
-              EDIT
-            </div>
-            <div className={classNames(styles.flexbox_edit_rectangle)}></div>
+            <div className={classNames(styles.flexbox_line)}></div>
             <div className={styles.flexbox_end_text}>
-              <div className={styles.flexbox_login_end}>
+              <div className={styles.flexbox_end_text_single}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
                 iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
                 elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
@@ -65,7 +64,7 @@ export default function MyAccount() {
                 felis ut, volutpat euismod felis. Fusce non arcu sed lorem
                 ultrices sollicitudin.
               </div>
-              <div className={styles.flexbox_login_end}>
+              <div className={styles.flexbox_end_text_single}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
                 iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
                 elit in, dapibus pharetra metus. Vestibulum non tempor nibh.
@@ -76,7 +75,7 @@ export default function MyAccount() {
                 felis ut, volutpat euismod felis. Fusce non arcu sed lorem
                 ultrices sollicitudin.
               </div>
-              <div className={styles.flexbox_login_end}>
+              <div className={styles.flexbox_end_text_single}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
                 iaculis molestie augue ut gravida. Nunc lectus massa, pretium et
                 elit in, dapibus pharetra metus. Vestibulum non tempor nibh.

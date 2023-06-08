@@ -32,8 +32,9 @@
   color: #5a6c73;
   font-weight: 700;
   flex-basis: 26%;
-  margin-left: 10.75vh;
+  margin-left: 6vw;
   align-self: center;
+  padding-bottom: 8px;
 }
 .flexbox_username_rectangle {
   color: #f98770;
@@ -45,7 +46,7 @@
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 20px;
-  height: 60%;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +78,7 @@
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 20px;
-  height: 60%;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,9 +88,9 @@
   margin-top: 2px;
   flex-basis: 100%;
   display: flex;
-  margin-left: 67.5%;
-  margin-right: 15.5%;
-  justify-content: space-between;
+  margin-left: 65.5%;
+  margin-right: 13.5%;
+  justify-content: space-around;
   align-self: flex-start;
   font-weight: 700;
   font-size: 16px;
@@ -102,33 +103,74 @@
 /* EMAIL */
 .flexbox_email {
   flex-basis: 100%;
-  height: 60px;
+  height: 160px;
   display: flex;
   margin-top: 1vh;
+  flex-wrap: wrap;
+  margin-left: 6vw;
 }
 .flexbox_email_text {
+  display: flex;
+  align-items: center;
   font-size: 35px;
   color: #5a6c73;
   font-weight: 700;
-  flex-basis: 13%;
-  margin-left: 10.75vh;
-  align-self: center;
+  flex-basis: 14.2%;
+  height: 36px;
+  margin-top: 0.75vh;
 }
 .flexbox_email_rectangle {
   color: #f98770;
   font-size: 19px;
   font-weight: 700;
-  flex-basis: 24%;
-  align-self: center;
+  flex-basis: 26%;
+  margin-right: 50%;
+  margin-top: 0.75vh;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 60%;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.flexbox_edit_rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 18%;
+  height: 42px;
+  margin-top: 2.5vh;
+  border-radius: 20px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #f98770;
+  background-color: #5a6c73;
+  margin-left: -1.2vw;
+}
+
+.flexbox_line {
+  margin-top: 3.5vh;
+  flex-basis: 77.75%;
+  height: 1px;
+  background-color: #f98770;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.flexbox_end_text {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+  margin-left: 4.25%;
+  flex-basis: 92%;
+  font-size: 10px;
+  font-weight: 700;
+  overflow-y: auto;
+}
+.flexbox_end_text_single {
+  flex-basis: 32%;
+}
 .page_wrapper {
   height: 100vh;
   display: flex;
@@ -136,4 +178,148 @@
   align-items: center;
   background-color: transparent;
   z-index: 1;
+}
+@media (max-width: 1600px) {
+  .flexbox_username_text {
+    font-size: 24px;
+    padding-bottom: 4px;
+  }
+  .flexbox_password_text {
+    font-size: 24px;
+  }
+  .flexbox_email_text {
+    font-size: 24px;
+  }
+  .flexbox_username_rectangle {
+    font-size: 16px;
+  }
+  .flexbox_password_rectangle {
+    font-size: 16px;
+  }
+  .flexbox_email_rectangle {
+    font-size: 16px;
+  }
+  .flexbox_edit_rectangle {
+    font-size: 16px;
+  }
+  .flexbox_options {
+    font-size: 12px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .flexbox_end_text {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .flexbox_end_text_single {
+    flex-basis: 90%;
+  }
+  .flexbox_email_rectangle {
+    margin-right: 25%;
+  }
+  .flexbox_edit_rectangle {
+    display: flex;
+    flex-basis: 16.5%;
+    height: 36px;
+    margin-top: 0.75vh;
+    margin-left: 0;
+  }
+  .flexbox_username_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    flex-basis: 25%;
+    margin-left: 4px;
+  }
+  .flexbox_username {
+    flex-basis: 100%;
+  }
+  .flexbox_username_rectangle {
+    flex-basis: 40%;
+  }
+  .flexbox_password {
+    flex-basis: 100%;
+    margin-top: 1vh;
+  }
+  .flexbox_password_text {
+    flex-basis: 25%;
+    margin-left: 4px;
+  }
+  .flexbox_password_rectangle {
+    flex-basis: 40%;
+  }
+  .flexbox_email {
+    margin-left: 0;
+    height: 60px;
+    align-items: center;
+    margin-top: 0vh;
+  }
+  .flexbox_email_text {
+    margin-left: 4px;
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flexbox_email_rectangle {
+    flex-basis: 40%;
+    margin: 0;
+    margin-right: 10%;
+  }
+  .flexbox_options {
+    margin-right: 36%;
+    margin-left: 26%;
+    margin-top: -1vh;
+    margin-bottom: 1vh;
+  }
+  .flexbox_edit_rectangle {
+    height: 36px;
+    margin-top: 0vh;
+  }
+  .flexbox_end_text {
+    height: 200px;
+  }
+}
+@media (max-width: 640px) {
+  .flexbox_edit_rectangle {
+    flex-basis: 40%;
+    margin-left: 30%;
+    margin-top: 1vh;
+  }
+  .flexbox_username {
+    margin-top: 3vh;
+  }
+  .flexbox_username_text {
+    flex-basis: 35%;
+    margin-left: 4px;
+  }
+  .flexbox_username_rectangle {
+    flex-basis: 60%;
+  }
+  .flexbox_password_text {
+    flex-basis: 35%;
+    margin-left: 4px;
+  }
+  .flexbox_password_rectangle {
+    flex-basis: 60%;
+  }
+  .flexbox_options {
+    margin-left: 37%;
+    margin-right: 5%;
+    margin-top: -1vh;
+    margin-bottom: 1vh;
+  }
+  .flexbox_email_text {
+    flex-basis: 35%;
+    margin-left: 4px;
+  }
+  .flexbox_email_rectangle {
+    flex-basis: 60%;
+    margin: 0;
+  }
+  .flexbox_line {
+    margin-top: 4vh;
+  }
 }
