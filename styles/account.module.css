@@ -1,5 +1,19 @@
+.login_background {
+  position: relative;
+  backdrop-filter: blur(20px);
+}
+.page_wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1;
+}
+/* #region LOGIN RECTANGLE */
+/* RECTANGLE */
 .login_rectangle {
-  position: fixed;
+  position: absolute;
   transform: translate(-50%, -50%);
   left: -1.5vw;
   display: flex;
@@ -14,12 +28,8 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
-
-.login_background {
-  position: relative;
-  backdrop-filter: blur(20px);
-}
-
+/* #region -------------- TOP PART -------------  */
+/* #region BASIC */
 /* USERNAME */
 .flexbox_username {
   flex-basis: 50%;
@@ -83,6 +93,7 @@
   justify-content: center;
   align-items: center;
 }
+
 /* OPTIONS */
 .flexbox_options {
   margin-top: 2px;
@@ -100,6 +111,7 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
 /* EMAIL */
 .flexbox_email {
   flex-basis: 100%;
@@ -135,6 +147,7 @@
   align-items: center;
 }
 
+/* EDIT */
 .flexbox_edit_rectangle {
   display: flex;
   align-items: center;
@@ -149,81 +162,39 @@
   background-color: #5a6c73;
   margin-left: -1.2vw;
 }
-
-.flexbox_line {
-  margin-top: 3.5vh;
-  flex-basis: 77.75%;
-  height: 1px;
-  background-color: #f98770;
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-}
-.flexbox_end_text {
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3vh;
-  margin-left: 4.25%;
-  flex-basis: 92%;
-  font-size: 10px;
-  font-weight: 700;
-  overflow-y: auto;
-}
-.flexbox_end_text_single {
-  flex-basis: 32%;
-}
-.page_wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  z-index: 1;
-}
+/* #endregion */
+/* #region RESPONSIVENESS */
 @media (max-width: 1600px) {
   .flexbox_username_text {
     font-size: 24px;
     padding-bottom: 4px;
   }
-  .flexbox_password_text {
-    font-size: 24px;
-  }
-  .flexbox_email_text {
-    font-size: 24px;
-  }
   .flexbox_username_rectangle {
     font-size: 16px;
+  }
+  .flexbox_password_text {
+    font-size: 24px;
   }
   .flexbox_password_rectangle {
     font-size: 16px;
   }
-  .flexbox_email_rectangle {
-    font-size: 16px;
+  .flexbox_email_text {
+    font-size: 24px;
   }
-  .flexbox_edit_rectangle {
+  .flexbox_email_rectangle {
     font-size: 16px;
   }
   .flexbox_options {
     font-size: 12px;
     margin-top: 0;
   }
+  .flexbox_edit_rectangle {
+    font-size: 16px;
+  }
 }
 @media (max-width: 1080px) {
-  .flexbox_end_text {
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  .flexbox_end_text_single {
-    flex-basis: 90%;
-  }
-  .flexbox_email_rectangle {
-    margin-right: 25%;
-  }
-  .flexbox_edit_rectangle {
-    display: flex;
-    flex-basis: 16.5%;
-    height: 36px;
-    margin-top: 0.75vh;
-    margin-left: 0;
+  .flexbox_username {
+    flex-basis: 100%;
   }
   .flexbox_username_text {
     display: flex;
@@ -233,12 +204,10 @@
     flex-basis: 25%;
     margin-left: 4px;
   }
-  .flexbox_username {
-    flex-basis: 100%;
-  }
   .flexbox_username_rectangle {
     flex-basis: 40%;
   }
+
   .flexbox_password {
     flex-basis: 100%;
     margin-top: 1vh;
@@ -250,6 +219,14 @@
   .flexbox_password_rectangle {
     flex-basis: 40%;
   }
+
+  .flexbox_options {
+    margin-right: 36%;
+    margin-left: 26%;
+    margin-top: -1vh;
+    margin-bottom: 1vh;
+  }
+
   .flexbox_email {
     margin-left: 0;
     height: 60px;
@@ -268,26 +245,14 @@
     margin: 0;
     margin-right: 10%;
   }
-  .flexbox_options {
-    margin-right: 36%;
-    margin-left: 26%;
-    margin-top: -1vh;
-    margin-bottom: 1vh;
-  }
+
   .flexbox_edit_rectangle {
     height: 36px;
     margin-top: 0vh;
-  }
-  .flexbox_end_text {
-    height: 200px;
+    margin-left: 0;
   }
 }
 @media (max-width: 640px) {
-  .flexbox_edit_rectangle {
-    flex-basis: 40%;
-    margin-left: 30%;
-    margin-top: 1vh;
-  }
   .flexbox_username {
     margin-top: 3vh;
   }
@@ -298,6 +263,7 @@
   .flexbox_username_rectangle {
     flex-basis: 60%;
   }
+
   .flexbox_password_text {
     flex-basis: 35%;
     margin-left: 4px;
@@ -305,12 +271,14 @@
   .flexbox_password_rectangle {
     flex-basis: 60%;
   }
+
   .flexbox_options {
     margin-left: 37%;
     margin-right: 5%;
     margin-top: -1vh;
     margin-bottom: 1vh;
   }
+
   .flexbox_email_text {
     flex-basis: 35%;
     margin-left: 4px;
@@ -319,7 +287,108 @@
     flex-basis: 60%;
     margin: 0;
   }
+
+  .flexbox_edit_rectangle {
+    flex-basis: 40%;
+    margin-left: 30%;
+    margin-top: 1vh;
+  }
+}
+@media (max-height: 860px) {
+  .login_rectangle {
+    height: 74vh;
+  }
+  .flexbox_username {
+    height: 80px;
+  }
+  .flexbox_password {
+    height: 80px;
+  }
+}
+@media (max-height: 540px) {
+  .login_rectangle {
+    height: 340px;
+  }
+  .flexbox_username {
+    height: 60px;
+  }
+  .flexbox_password {
+    height: 60px;
+  }
+}
+/* #endregion */
+/* #endregion */
+/* #region ------------- BOTTOM PART ------------ */
+/* #region BASIC */
+.flexbox_line {
+  margin-top: 3.5vh;
+  flex-basis: 77.75%;
+  height: 1px;
+  background-color: #f98770;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.flexbox_end_text {
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+  margin-left: 4.25%;
+  flex-basis: 92%;
+  font-size: 10px;
+  font-weight: 700;
+  overflow-y: auto;
+}
+.flexbox_end_text_single {
+  flex-basis: 32%;
+}
+/* #endregion */
+/* #region RESPONSIVENESS */
+@media (max-width: 1080px) {
+  .flexbox_end_text {
+    flex-direction: column;
+    row-gap: 20px;
+    height: 200px;
+  }
+  .flexbox_end_text_single {
+    flex-basis: 90%;
+  }
+}
+@media (max-width: 640px) {
   .flexbox_line {
     margin-top: 4vh;
   }
 }
+@media (max-height: 860px) {
+  @media (max-width: 640px) {
+    .flexbox_end_text {
+      height: 21vh;
+      margin-top: 1vh;
+    }
+  }
+}
+@media (max-height: 540px) {
+  .flexbox_line {
+    margin-top: 0;
+  }
+  .flexbox_end_text {
+    margin-top: 0.5vh;
+    height: 65px;
+  }
+  @media (max-width: 1080px) {
+    .flexbox_end_text {
+      height: 100px;
+      margin-top: 1vh;
+    }
+  }
+  @media (max-width: 640px) {
+    .flexbox_line {
+      margin-top: 6vh;
+    }
+    .flexbox_end_text {
+      height: 60px;
+      margin-top: 1vh;
+    }
+  }
+}
+/* #endregion */
+/* #endregion */
