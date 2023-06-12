@@ -5,15 +5,17 @@ import classNames from "classnames";
 export default function Sidebar(props) {
   return (
     <div id={styles.sidebar_hide} className={styles.sidebar}>
+      {/*
       <Link className={styles.sidebar_link} href={"/menu"}>
         <div
-          className={classNames(styles.sidebar_menu, {
+          className={classNames(styles.sidebar_menu, styles.menu_button, {
             [styles.sidebar_menu_on]: props.page_number === 0,
           })}
         >
           <img src={"sidebar/menu.svg"} alt="menu"></img>
         </div>
       </Link>
+      */}
       <Link className={styles.sidebar_link} href={"/clothes"}>
         <div
           className={classNames(styles.sidebar_clothes, {
