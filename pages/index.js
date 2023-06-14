@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from "../styles/index.module.css";
 import classNames from "classnames";
+import Sidebar from "@component/components/sidebar";
+import Sidebar_small from "@component/components/sidebar_small";
 
 function Home() {
   return (
@@ -169,33 +171,8 @@ function Home() {
           ></img>
         </div>
       </div>
-      {
-        <div className="sidebar">
-          <Link className="sidebar_link" href={"/menu"}>
-            <div className={"sidebar_menu"}>
-              <img src={"sidebar/menu.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/clothes"}>
-            <div className={"sidebar_clothes"}>
-              <img src={"sidebar/wieszak.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/cupboard"}>
-            <div className={"sidebar_cupboard"}>
-              <img src={"sidebar/szafa.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <Link className="sidebar_link" href={"/account"}>
-            <div className={"sidebar_account"}>
-              <img src={"sidebar/moje konto.svg"} alt="menu"></img>
-            </div>
-          </Link>
-          <div className={"sidebar_logout"}>
-            <img src={"sidebar/wyloguj.svg"} alt="menu"></img>
-          </div>
-        </div>
-      }
+      {<Sidebar page_number={0} />}
+      {<Sidebar_small page_number={0} />}
     </>
   );
 }

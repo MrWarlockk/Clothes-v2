@@ -5,16 +5,6 @@ import classNames from "classnames";
 export default function Sidebar_small(props) {
   return (
     <div className={styles.sidebar}>
-      <Link className={styles.sidebar_link} href={"/menu"}>
-        <div
-          className={classNames(styles.sidebar_menu, {
-            [styles.sidebar_menu_on]: props.page_number === 0,
-          })}
-        >
-          <img src={"sidebar/menu.svg"} alt="menu"></img>
-        </div>
-      </Link>
-
       <Link className={styles.sidebar_link} href={"/clothes"}>
         <div
           className={classNames(styles.sidebar_clothes, {
