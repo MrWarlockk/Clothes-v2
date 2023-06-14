@@ -148,6 +148,8 @@
   bottom: 8%;
   transform: translate(-50%-50%);
   cursor: pointer;
+  width: 30px;
+  height: 40px;
 }
 .sidebar_logout:hover {
   filter: brightness(80%);
@@ -177,10 +179,6 @@
     width: 0px;
     height: 0px;
   }
-  .sidebar_logout {
-    width: 40px;
-    height: 40px;
-  }
   @media (max-height: 640px) {
     .sidebar {
       width: 87vw;
@@ -188,6 +186,10 @@
     }
     .sidebar img {
       max-height: 20px;
+    }
+    .sidebar_logout {
+      width: 16px;
+      height: 32px;
     }
   }
   .sidebar_menu_on img {
