@@ -2,9 +2,9 @@
   width: 0vw;
   height: 0px;
 }
-.sidebar_logout {
-  width: 0;
-  height: 0;
+.sidebar_logout img {
+  width: 0px;
+  height: 0px;
 }
 .sidebar {
   position: fixed;
@@ -58,8 +58,9 @@
   margin-bottom: 1vh;
   padding-bottom: 1vh;
   margin-right: 2vw;
+  margin-left: 1vw;
   padding-right: 1vw;
-  padding-left: 2vw;
+  padding-left: 1vw;
   display: flex;
   align-self: stretch;
   justify-content: center;
@@ -178,6 +179,10 @@
   #sidebar_hide div img {
     width: 0px;
     height: 0px;
+  }
+  .sidebar_logout img {
+    width: 100%;
+    height: 100%;
   }
   @media (max-height: 640px) {
     .sidebar {
