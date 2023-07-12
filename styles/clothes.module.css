@@ -252,15 +252,20 @@
 }
 @media (max-width: 720px) {
   .outfit_creator {
-    width: 250px;
+    top: 48.35%;
+    left: 8.25%;
+    height: 40vh;
+    width: 73vw;
+    flex-direction: column;
+    padding: 2vh 0;
   }
   .outfit_creator_images_container {
     height: 200px;
     width: 200px;
   }
   .outfit_creator_bottom {
-    margin-left: 2.35vw;
-    margin-right: 2.25vw;
+    margin-left: 7.35vw;
+    margin-right: 3.75vw;
   }
   .outfit_creator_save {
     margin-right: 0.4vw;
@@ -270,17 +275,7 @@
     font-size: 12px;
   }
 }
-@media (max-width: 520px) {
-  .outfit_creator {
-    width: 250px;
-    left: 2.5%;
-  }
-}
-@media (max-height: 340px) {
-  .outfit_creator {
-    height: 74.5vh;
-  }
-}
+
 /* #endregion */
 /* #region -------------LIST-----------------*/
 .clothes_menu {
@@ -444,7 +439,7 @@
   flex-basis: 128px;
   display: flex;
   flex-direction: column;
-  padding-top: 6%;
+  padding-top: 40px;
 }
 .clothes_menu_type > div {
   display: flex;
@@ -516,6 +511,7 @@
 @media (max-width: 1440px) {
   .clothes_menu_type {
     flex-basis: 64px;
+    padding-top: 68px;
   }
   .clothes_menu_type_all_flex > img {
     height: 22px;
@@ -526,13 +522,7 @@
 }
 @media (max-width: 1080px) {
   .clothes_menu {
-    display: flex;
-    position: absolute;
-    top: 6.25%;
-    left: 58.25%;
-    transform: translate(-50%-50%);
     height: 84.4vh;
-    width: 34.5vw;
   }
 }
 @media (max-width: 720px) {
@@ -546,28 +536,22 @@
     flex-basis: 64px;
     display: flex;
     flex-direction: column;
-    padding-top: 6%;
+    padding-top: 20px;
+  }
+  .clothes_menu {
+    top: 4.25%;
+    left: 8.25%;
+    height: 42.5vh;
+    width: 90.5vw;
+  }
+  .clothes_menu_list_images {
+    padding: 16px 3px;
+  }
+  .clothes_menu_list_images_container {
+    height: 145px;
   }
 }
-@media (max-width: 650px) {
-  .clothes_menu_list_filters {
-    height: 90px;
-  }
-  .clothes_menu_list_filters_filter {
-    flex-basis: 100%;
-  }
-  .clothes_menu_list_filters_happy {
-    margin-left: 4px;
-  }
-}
-@media (max-width: 555px) {
-  .clothes_menu_list_filters_sad {
-    margin-left: 4px;
-  }
-  .clothes_menu_list_filters_happy {
-    margin-left: 0px;
-  }
-}
+
 @media (max-height: 640px) {
   .clothes_menu_type > div > div > img {
     height: 30px;
