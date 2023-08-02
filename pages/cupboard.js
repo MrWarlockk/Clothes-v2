@@ -281,6 +281,30 @@ export default function Cupboard() {
     set_piece_color("#f98770");
     set_outfit_color("white");
   };
+
+  async function fetchHoodies() {
+    /*
+    try {
+      const response = await fetch(
+        "http://localhost:3000/api/clothes/hoodie/index.php"
+      );
+      const data = await response.json();
+
+      data.forEach((directory) => {
+        console.log(directory);
+      });
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+    */
+    console.log("Fetching from URL:", "/api/clothes/Hoodie");
+    const response = await fetch("/api/clothes/Hoodie");
+    const textResponse = await response.text();
+    console.log("Response:", textResponse);
+  }
+
+  fetchHoodies();
+
   /*----------------------------------------------------------*/
   /*--------------------------body----------------------------*/
   /*----------------------------------------------------------*/
@@ -509,6 +533,7 @@ export default function Cupboard() {
           </div>
         </Modal>
       )}
+      <div></div>
     </>
   );
 }
