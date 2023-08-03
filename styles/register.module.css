@@ -205,75 +205,16 @@
 /* #endregion */
 /* #endregion */
 /* #region ----------------------CONTENT----------------------- */
-/* #region --------------TITLE/DESC---------------- */
-.flexbox_main {
-  position: absolute;
-  width: 40vw;
-  height: 45vh;
-  top: 13%;
-  left: 7.1%;
-  transform: translate(-50%-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.flexbox_main_img {
-  flex-basis: 56.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-.flexbox_main_img img {
-  max-height: 25vh;
-  max-width: 100%;
-}
-.flexbox_main_text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-style: italic;
-  flex-basis: 43.5%;
-  padding: 0vh 2vw;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 2rem;
-}
-@media (max-width: 1080px) {
-  .flexbox_main {
-    width: 60vw;
-    left: 7.1%;
-  }
-}
-@media (max-width: 760px) {
-  .flexbox_main {
-    width: 85vw;
-    left: 7.1%;
-    height: 50vh;
-  }
-}
-@media (max-height: 860px) {
-  .flexbox_main_text {
-    font-size: 18px;
-  }
-}
-@media (max-height: 760px) {
-  .flexbox_main_text {
-    font-size: 16px;
-  }
-}
-/* #endregion */
+
 /* #region ----------------LOGIN------------------- */
 .flexbox_login {
-  padding: 1.65vh 0.65vw;
+  padding: 3.65vh 0.65vw;
   padding-bottom: 0.1vh;
   position: absolute;
-  width: 20vw;
-  height: 20vh;
-  top: 67%;
-  left: 7.1%;
+  width: 30vw;
+  height: 40vh;
+  top: 27%;
+  left: 12.1%;
   transform: translate(-50%-50%);
   display: flex;
   flex-direction: column;
@@ -288,9 +229,25 @@
   font-weight: 500;
   font-size: 14px;
 }
-
+/* INPUT */
+.flexbox_login_item input {
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  background-color: inherit;
+  color: inherit;
+  height: 28px;
+  text-align: center;
+}
+.flexbox_login_item input::placeholder {
+  text-align: center;
+  color: white;
+}
+.flexbox_login_item input:focus {
+  outline: none;
+}
 .flexbox_login_email {
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
   border-radius: 5vw;
   background-color: #b1bdb9;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
@@ -298,7 +255,7 @@
   min-height: 24px;
 }
 .flexbox_login_password {
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
   border-radius: 5vw;
   background-color: #b1bdb9;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
@@ -386,15 +343,6 @@
   z-index: 2;
 }
 
-.image_left {
-  position: absolute;
-  top: 87.5%;
-  left: 41.25%;
-  transform: translate(-50%, -50%);
-  width: 21vw;
-  height: auto;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
 .images_middle {
   display: flex;
   flex-direction: column;
@@ -433,26 +381,14 @@
   .images_middle {
     top: 50%;
   }
-  .image_left {
-    left: 61.25%;
-  }
+
   .image_right_block {
     width: 0vw;
     height: 0vh;
   }
 }
-@media (max-height: 760px) {
-  .image_left {
-    width: 0vw;
-    height: auto;
-  }
-}
 @media (max-width: 760px) {
   .images_middle img {
-    width: 0vw;
-    height: auto;
-  }
-  .image_left {
     width: 0vw;
     height: auto;
   }

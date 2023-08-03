@@ -15,7 +15,7 @@ async function db_connect() {
     });
     return connection;
   } catch (error) {
-    console.log("Error whle connecting to the database", error);
+    console.log("Error while connecting to the database", error);
     throw error;
   }
 }

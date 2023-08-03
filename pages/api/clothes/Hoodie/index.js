@@ -1,4 +1,4 @@
-
+/*
 session_start();
 
 // If logged in go to the login page
@@ -6,18 +6,25 @@ session_start();
 import jwt from 'jsonwebtoken';
 import db_connect from  '../Z_Requirements/db_connect';
 import Pc_of_clothing from '../Z_Requirements/classes';
-//putenv('ACCESS_TOKEN_SECRET=secret');
-$secret_key = "secret";
+import React from 'react';
+import Cookies from 'js-cookie';
 
-$jwt_token = null;
-if (isset($_COOKIE['jwt'])) {
-    $jwt_token = $_COOKIE['jwt'];
+
+function ReadHoodies(){
+const secret_key = "secret";
+
+let jwt_token = null;
+// Change login, register, logout to js and make a cookie, somehow retain the value so it's read here (prolly just works 4HEad)
+
+if(Cookies.get(jwt) !== undefined){
+  const jwt_token = Cookies.get(jwt);
 }
 
-if(!$jwt_token)
+if(!jwt_token)
 {
-  $response['message']="Session expired";
-    exit();
+  let response = {message:"Session expired"};
+  console.log(response);
+  return;
 }
 
 try {
@@ -35,7 +42,7 @@ $username = $payload_decoded->name;
 
 $clothing_type = "hoodie";
 
-/* Array that stores all the values of the fetched clothes */
+// Array that stores all the values of the fetched clothes 
 $clothing = array();
 
 $login_clothes_get_id = "select * from users where userlogin='$username'";
@@ -46,20 +53,21 @@ $login_clothes_id = "select * from userclothes where clothinguser='$user_id' and
 
 $login_clothes = $login_db->query($login_clothes_id);
 
-/* Pushing the values from the database to the clothing array */
+// Pushing the values from the database to the clothing array 
 while($row_db = $login_clothes->fetch(PDO::FETCH_ASSOC)){
   array_push($clothing, new Pc_of_clothing($row_db['clothingtype'], $row_db['clothingcolor'], $row_db['clothingid'], $row_db['clothingimg']));
 }
 
 $directories = array();
 
-/* Saving the directories to display in cupboard.php */
+// Saving the directories to display in cupboard.php 
 for($i = 0; $i< count($clothing);$i++){
   array_push($directories, $clothing[$i]->directory);
 }
 $login_db = null;
 
-/* Sending back the directories of hoodies */
+// Sending back the directories of hoodies 
 
 echo json_encode($directories);
 
+}*/

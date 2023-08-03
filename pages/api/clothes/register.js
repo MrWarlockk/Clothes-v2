@@ -1,10 +1,7 @@
-<?php
-
-session_start();
-require_once "Z_requirements/db_connect.php";
-require_once '../vendor/autoload.php';
-use \Firebase\JWT\JWT;
-$returns = array();
+/*
+import db_connect from  '../Z_Requirements/db_connect';
+import jwt from 'jsonwebtoken';
+let returns = [];
 
   // If connection to the server has been established
 if(isset($_POST['email_reg']))
@@ -78,17 +75,7 @@ if(isset($_POST['email_reg']))
     $row_db = $login_clothes->fetch(PDO::FETCH_ASSOC);
     $returns['user'][1] = $row_db['userid'];
     $login_db = null;
-/*
-    $payload=[
-        'iss'=>'localhost',
-        'aud'=>'localhost',
-        'exp'=>time()+1000,
-        'data'=>[
-            'name'=> $username_reg,
-        ],
-    ];
-    
-    */
+
     $payload=['name'=> $username_reg];
     $secret_key="very secret";
     $jwt = JWT::encode($payload,$secret_key, 'HS256');
@@ -97,4 +84,31 @@ if(isset($_POST['email_reg']))
   }
   }
   echo json_encode($returns);
-?>
+
+*/
+
+import db_connect from "./Z_Requirements/db_connect";
+
+export default async function Register(req, res) {
+  const { email, password, password2 } = req.query;
+  console.log(email);
+  console.log(password);
+
+  if (password !== password2) {
+    res.status(200).json({ message: "Different passwords" });
+  }
+
+  try {
+    const dbConnect = await db_connect();
+
+    // Db operations, add xampp
+    res.status(200).json({ message: "All good" });
+
+    dbConnect.end();
+  } catch (error) {
+    console.error("Error during registration", error);
+    res
+      .status(500)
+      .json({ message: "Error when trying to connect to the database" });
+  }
+}
