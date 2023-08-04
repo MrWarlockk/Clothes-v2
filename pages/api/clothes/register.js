@@ -86,7 +86,7 @@ if(isset($_POST['email_reg']))
   echo json_encode($returns);
 
 */
-
+/*
 import db_connect from "./Z_Requirements/db_connect";
 
 export default async function Register(req, res) {
@@ -102,6 +102,12 @@ export default async function Register(req, res) {
     const dbConnect = await db_connect();
 
     // Db operations, add xampp
+    const [rows, fields] = await dbConnect.execute(
+      "SELECT * FROM users WHERE userlogin = ?",
+      [email]
+    );
+    console.log("Fetched rows:", rows);
+
     res.status(200).json({ message: "All good" });
 
     dbConnect.end();
@@ -110,5 +116,21 @@ export default async function Register(req, res) {
     res
       .status(500)
       .json({ message: "Error when trying to connect to the database" });
+  }
+}*/
+import db_connect from "./Z_Requirements/db_connect";
+
+export default async function handler(req, res) {
+  const dbConnect = await db_connect();
+
+  try {
+    const [data, fields] = await dbConnect.execute(
+      "SELECT * FROM userclothes;"
+    );
+    console.log("Data:", data);
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    res.status(500).json({ message: "Error fetching data from the database" });
   }
 }
